@@ -1,0 +1,128 @@
+.radio {
+  &-box {
+    position: relative;
+  }
+
+  &-input {
+    &:not(checked) {
+      display: none;
+    }
+
+    &:checked + .radio-label {
+      &:before {
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    + .radio-label {
+      position: relative;
+      padding-left: 25px;
+      font-size: 16px;
+      line-height: 18px;
+      margin: 0;
+      color: #888888;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -9px;
+        width: 18px;
+        height: 18px;
+        border-radius: 100%;
+        background: #fff;
+        border: 1px solid #ccc;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        margin-top: -4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background: $primary-color;
+        opacity: 0;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
+
+
+.calc-form {
+  .radio {
+    &-box {
+      position: relative;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+ 
+    }
+  
+    &-input {
+      &:not(checked) {
+        display: none;
+      }
+  
+      &:checked + .radio-label {
+        border: 2px solid #0C4DA2;
+        background-color: #fff;
+        &:before {
+        }
+  
+        &:after {
+          opacity: 1;
+        }
+      }
+  
+      + .radio-label {
+        position: relative;
+        line-height: 19px;
+        @include firasans-normal;
+        color: #333333;
+        font-size: 16px;
+        margin: 0;
+        cursor: pointer;
+        vertical-align: top;
+        padding: 26px 30px;
+        background-color: #F5F5F5;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid transparent;
+        .subtext {
+          font-size: 14px;
+          line-height: 21px;
+          @include firasans-normal;
+          color: #0C4DA2;
+          position: absolute;
+          top: 5px;
+          right: 30px;
+        }
+     .label-left {
+       width: 60%;
+     }
+
+        &:before,&::after {
+          display: none;
+        }
+       
+       
+          
+        
+      }
+    }
+  }
+}

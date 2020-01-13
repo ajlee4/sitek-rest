@@ -1,0 +1,101 @@
+.aside {
+ width: 25%;
+  position: relative;
+  border-radius: 15px;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(12, 77, 162, 0.07);
+  }
+ @include tablet {
+   display: none;
+ }
+  @include mobile {
+    display: none;
+  }
+  .sticky {
+    position: fixed;
+    z-index: 101;
+
+  
+  }
+  .stop {
+    position: relative;
+    z-index: 101;
+  }
+  &__inner {
+  }
+  &__nav {
+    height: 538px;
+    overflow-y: auto;
+   
+    list-style: none;
+
+    color: #333333;    
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+   
+    margin-bottom: 20px;
+
+    .nav {
+      &__item {
+      text-transform: initial;
+     
+      }
+      &__item-title {
+        .nav__link {
+          padding-top: 20px;
+          padding-left: 18px;
+          @include firasans-bold;
+          font-size: 16px;
+          line-height: 16px;
+          &.active {
+           background: none;
+           text-decoration: none;
+         
+          }
+        }
+      }
+
+      &__link {
+        padding: 14px 75px 14px 15px;
+        padding-left: 30px;
+        font-size: 14px;
+        line-height: 14px;
+        @include firasans-normal;
+        &:hover {
+          background: rgba(12, 77, 162, 0.07);
+        }
+
+        display: block;
+
+        &.active {
+          color: #0c4da2;
+          text-decoration: underline;
+          background: rgba(12, 77, 162, 0.07);
+        }
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

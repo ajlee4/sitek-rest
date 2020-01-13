@@ -1,0 +1,407 @@
+{{!Sitekgram}}
+
+
+
+{{> layout/header}}
+<div class="content sitekgram" id="sitekgram-page">
+    <div class="container">
+        <div class="content__inner">
+    <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="home.html" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item "><a href="services.html"
+                            class="breadcrumbs__link active">Sitekgram</a>
+                    </li>
+
+
+                </ul>
+
+            <div class="content__info">
+            
+                <section class="section sitekgram">
+
+                    <div class="section__inner">
+                        <div class="section__top">
+                            <h2 class="section__title">Sitekgram</h2>
+
+
+                        </div>
+                        <form class="sitekgram__filter">
+
+                            <div class="sitekgram__filter-left">
+                                <div class="filter-field">
+                                    <ul class="filter-field__list">
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=12 name='news' value='Видео' label='Видео'}} <div
+                                                class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=13 name='news' label='Новости компании'}} <div
+                                                class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item"> {{> ui/checkbox id=14 name='news' label='Пресса'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item"> {{> ui/checkbox id=15 name='news' label='Документы'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=16 name='news' label='Выполненные проекты'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sitekgram__filter-right">
+                                <div class="filter-field">
+                                    <div class="filter-field__title">Публикации в социальных сетях</div>
+                                    <ul class="filter-field__list">
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=17 name='social' value='twitter' label='Twitter'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=18 name='social' value='facebook' label='Facebook'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=19  name='social' value='instagram' label='Instagram'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+                                        <li class="list-item">
+                                            {{> ui/checkbox id=20  name='social' value='linkedin' label='Linkedin'}}
+                                            <div class="count-field"> <span class="count">8</span></div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-reset-filter" type="reset"><span>Очистить фильтр</span></button>
+
+                        </form>
+                        <section class="section catalog" id="catalog">
+
+                            <div class="section__inner">
+                                <div class="catalog__filter">
+                            <form action="" class="catalog__form" method="GET" id='catalog-search'>
+                                <div class="catalog__filter-inner">
+                                    <div class="filter-field">
+                                        <h3 class="filter-field__title">
+                                            Виды работ
+                                            <svg class="catalog-mobile-wrap" width="19" height="11" viewBox="0 0 19 11"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.0883 10.5122L9.49114 4.03023L2.89395 10.5122C2.73653 10.6668 2.54965 10.7895 2.34398 10.8732C2.1383 10.9569 1.91786 11 1.69524 11C1.47262 11 1.25217 10.9569 1.0465 10.8732C0.840822 10.7895 0.653938 10.6668 0.496521 10.5122C0.339104 10.3575 0.214235 10.1739 0.129042 9.97178C0.043848 9.7697 0 9.55311 0 9.33438C0 9.11565 0.043848 8.89906 0.129042 8.69697C0.214235 8.49489 0.339104 8.31127 0.496521 8.15661L8.30092 0.488557C8.45823 0.333687 8.64507 0.210818 8.85076 0.126986C9.05645 0.0431519 9.27695 0 9.49964 0C9.72233 0 9.94283 0.0431519 10.1485 0.126986C10.3542 0.210818 10.5411 0.333687 10.6984 0.488557L18.5028 8.15661C18.6604 8.31116 18.7854 8.49474 18.8708 8.69684C18.9561 8.89894 19 9.11558 19 9.33438C19 9.55317 18.9561 9.76982 18.8708 9.97192C18.7854 10.174 18.6604 10.3576 18.5028 10.5122C17.8396 11.147 16.7514 11.1637 16.0883 10.5122Z"
+                                                    fill="#0C4DA2" fill-opacity="0.4" />
+                                            </svg>
+
+                                        </h3>
+                                        <ul class="filter-field__list">
+
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=3  label='Модернизация станков' }} <div
+                                                    class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=4  label='Производство станков'}} <div
+                                                    class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=24  label='Поставка станков'}} <div
+                                                    class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=28  label='Поставка станков б/у'}} <div
+                                                    class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="filter-field ">
+                                        <h3 class="filter-field__title">
+                                            Типы станков
+                                            <svg class="catalog-mobile-wrap" width="19" height="11" viewBox="0 0 19 11"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.0883 10.5122L9.49114 4.03023L2.89395 10.5122C2.73653 10.6668 2.54965 10.7895 2.34398 10.8732C2.1383 10.9569 1.91786 11 1.69524 11C1.47262 11 1.25217 10.9569 1.0465 10.8732C0.840822 10.7895 0.653938 10.6668 0.496521 10.5122C0.339104 10.3575 0.214235 10.1739 0.129042 9.97178C0.043848 9.7697 0 9.55311 0 9.33438C0 9.11565 0.043848 8.89906 0.129042 8.69697C0.214235 8.49489 0.339104 8.31127 0.496521 8.15661L8.30092 0.488557C8.45823 0.333687 8.64507 0.210818 8.85076 0.126986C9.05645 0.0431519 9.27695 0 9.49964 0C9.72233 0 9.94283 0.0431519 10.1485 0.126986C10.3542 0.210818 10.5411 0.333687 10.6984 0.488557L18.5028 8.15661C18.6604 8.31116 18.7854 8.49474 18.8708 8.69684C18.9561 8.89894 19 9.11558 19 9.33438C19 9.55317 18.9561 9.76982 18.8708 9.97192C18.7854 10.174 18.6604 10.3576 18.5028 10.5122C17.8396 11.147 16.7514 11.1637 16.0883 10.5122Z"
+                                                    fill="#0C4DA2" fill-opacity="0.4" />
+                                            </svg>
+
+                                        </h3>
+                                        <ul class="filter-field__list">
+
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=5  label='Горизонтально-расточные'}}
+                                                <div class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item"> {{> ui/checkbox id=6  label='Продольно-фрезерные'}}
+                                                <div class="count-field"> <span class="count">8</span></div>
+                                            </li>
+
+                                            <li class="list-item"> {{> ui/checkbox id=7  label='Протяжные' }}
+                                                <div class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item"> {{> ui/checkbox id=8  label='Абразивно-отрезные'}}
+                                                <div class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                        </ul>
+
+
+
+                                    </div>
+                                    <div class="filter-field">
+                                        <h3 class="filter-field__title">
+                                            <span>Отрасль</span>
+                                            <svg class="catalog-mobile-wrap" width="19" height="11" viewBox="0 0 19 11"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.0883 10.5122L9.49114 4.03023L2.89395 10.5122C2.73653 10.6668 2.54965 10.7895 2.34398 10.8732C2.1383 10.9569 1.91786 11 1.69524 11C1.47262 11 1.25217 10.9569 1.0465 10.8732C0.840822 10.7895 0.653938 10.6668 0.496521 10.5122C0.339104 10.3575 0.214235 10.1739 0.129042 9.97178C0.043848 9.7697 0 9.55311 0 9.33438C0 9.11565 0.043848 8.89906 0.129042 8.69697C0.214235 8.49489 0.339104 8.31127 0.496521 8.15661L8.30092 0.488557C8.45823 0.333687 8.64507 0.210818 8.85076 0.126986C9.05645 0.0431519 9.27695 0 9.49964 0C9.72233 0 9.94283 0.0431519 10.1485 0.126986C10.3542 0.210818 10.5411 0.333687 10.6984 0.488557L18.5028 8.15661C18.6604 8.31116 18.7854 8.49474 18.8708 8.69684C18.9561 8.89894 19 9.11558 19 9.33438C19 9.55317 18.9561 9.76982 18.8708 9.97192C18.7854 10.174 18.6604 10.3576 18.5028 10.5122C17.8396 11.147 16.7514 11.1637 16.0883 10.5122Z"
+                                                    fill="#0C4DA2" fill-opacity="0.4" />
+                                            </svg>
+
+
+                                        </h3>
+                                        <ul class="filter-field__list">
+
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=9  label='Авиастроение' }} <div class="count-field">
+                                                    <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=10  label='Авиадвигателестроение'}}
+                                                <div class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                            <li class="list-item">
+                                                {{> ui/checkbox id=11  label='Железнодорожное машиностроение'}} <div
+                                                    class="count-field"> <span class="count">8</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalog__filter-search">
+                                    <input type="search" placeholder="Поиск" class="form-input" name="titles"><button
+                                        class="btn search-btn" type="submit"></button><button
+                                        class="btn btn-reset-filter" type="reset"><span>Очистить
+                                            фильтр</span> </button>
+                                </div>
+                            </form>
+
+                        </div>
+                            </div>
+                        </section>
+                        <form action="" class="sitekgram__subfield">
+                            <h3 class="filter-subfield__title"> <span> Теги</span>   <svg class="sitekgram-mobile-wrap" width="19" height="11"
+                                                        viewBox="0 0 19 11" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M16.0883 10.5122L9.49114 4.03023L2.89395 10.5122C2.73653 10.6668 2.54965 10.7895 2.34398 10.8732C2.1383 10.9569 1.91786 11 1.69524 11C1.47262 11 1.25217 10.9569 1.0465 10.8732C0.840822 10.7895 0.653938 10.6668 0.496521 10.5122C0.339104 10.3575 0.214235 10.1739 0.129042 9.97178C0.043848 9.7697 0 9.55311 0 9.33438C0 9.11565 0.043848 8.89906 0.129042 8.69697C0.214235 8.49489 0.339104 8.31127 0.496521 8.15661L8.30092 0.488557C8.45823 0.333687 8.64507 0.210818 8.85076 0.126986C9.05645 0.0431519 9.27695 0 9.49964 0C9.72233 0 9.94283 0.0431519 10.1485 0.126986C10.3542 0.210818 10.5411 0.333687 10.6984 0.488557L18.5028 8.15661C18.6604 8.31116 18.7854 8.49474 18.8708 8.69684C18.9561 8.89894 19 9.11558 19 9.33438C19 9.55317 18.9561 9.76982 18.8708 9.97192C18.7854 10.174 18.6604 10.3576 18.5028 10.5122C17.8396 11.147 16.7514 11.1637 16.0883 10.5122Z"
+                                                            fill="#0C4DA2" fill-opacity="0.4" />
+                                                    </svg></h3>
+                            <ul class="filter-subfield__list">
+                                <li class="list-item">
+                                    {{> ui/checkbox id=21 name='type' value='Модернизация' label='Модернизация'}}
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=22 name='type' value='Машиностроение' label='Машиностроение'}}
+                                </li>
+                                <li class="list-item"> {{> ui/checkbox id=23 name='type' value='Рама' label='Рама'}}
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=24 name='type' value='Продольно-фрезерный' label='Продольно-фрезерный'}}
+                                </li>
+                            </ul>
+                        </form>
+                        <div class="sitekgram__result-field">
+                            <div class="result">Показано 3 из <span>27</span></div>
+                            <div class="sitekgram-list">
+                                <div class="row sitekgram">
+                                    <div class="col-lg-4 col-md-6 sitekgram__col">
+                                        <div class="col__inner">
+                                            <a href="">
+                                                <div class="col__img">
+                                                    <img src="../static/images/sitekgram1.jpg" alt="" class="img">
+                                                    <div class="label">Видео</div>
+                                                </div>
+                                            </a>
+
+                                            <div class="col__info">
+                                                <h3 class="info-title">
+                                                    <a href="">Продольно-фрезерный станок СИ620Ф4</a>
+                                                </h3>
+                                                <div class="info-text">
+                                                    Друзья, рады поделиться видео с предварительной приемки нашего
+                                                    специального
+                                                    ...
+                                                </div>
+
+                                                <ul class="category">
+                                                    <li class="category__item"><a href="#">Продольно-фрезерный</a> </li>
+                                                    <li class="category__item"><a href="#">...</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 sitekgram__col">
+                                        <div class="col__inner">
+                                            <a href="">
+                                                <div class="col__img">
+                                                    <img src="../static/images/sitekgram2.jpg" alt="" class="img">
+                                                    <div class="label">Пресса</div>
+                                                </div>
+                                            </a>
+                                            <div class="col__info">
+                                                <h3 class="info-title">
+                                                    <a href="">Ситек Инжиринг – резидент Парка высоких технологий</a>
+                                                </h3>
+                                                <div class="info-text">
+                                                    Рады поделиться новостью с приемки нашего специального
+                                                    продольно-фрезерного
+                                                    станка с ЧПУ ...
+                                                </div>
+
+                                                <ul class="category">
+                                                    <li class="category__item"><a href="#">Модернизация</a> </li>
+                                                    <li class="category__item"><a href="#">Машиностроение</a> </li>
+                                                    <li class="category__item"><a href="#">...</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div href="" class="col-lg-4 col-md-6 sitekgram__col">
+                                        <div class="col__inner">
+                                            <a href="">
+                                                <div class="col__img">
+                                                    <img src="../static/images/sitekgram3.jpg" alt="" class="img">
+                                                    <div class="label">Новости</div>
+                                                </div>
+                                            </a>
+                                            <div class="col__info">
+                                                <h3 class="info-title">
+                                                    <a href="">Абразивно-отрезной станок СИ400-30Л</a>
+                                                </h3>
+                                                <div class="info-text">
+                                                    Абразивно-отрезной станок СИ400-30Л предназначен для резки
+                                                    абразивным кругом
+                                                    диаметром до ...
+                                                </div>
+
+                                                <ul class="category">
+                                                    <li class="category__item"><a href="#"> Машиностроение</a> </li>
+                                                    <li class="category__item"><a href="#">...</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <a href="#" class="sitekgram__list-expand"><span>Показать больше</span>
+                                    <div class="arrow-down"><svg width="19" height="11" viewBox="0 0 19 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M18.5607 0.43934C19.1464 1.02513 19.1464 1.97487 18.5607 2.56066L10.5607 10.5607C9.97487 11.1464 9.02513 11.1464 8.43934 10.5607L0.43934 2.56066C-0.146446 1.97487 -0.146446 1.02513 0.439341 0.439339C1.02513 -0.146447 1.97487 -0.146447 2.56066 0.439339L9.5 7.37868L16.4393 0.43934C17.0251 -0.146447 17.9749 -0.146447 18.5607 0.43934Z"
+                                                fill="#0C4DA2" fill-opacity="0.4" />
+                                        </svg></div>
+                                </a>
+                            </div>
+                            <div class="sitekgram-sublist">
+                                <div class="row sitekgram">
+                                    <div class="col-lg-4 col-md-6 sitekgram__col">
+                                        <div class="col__inner">
+                                            <a href="">
+                                                <div class="col__img">
+                                                    <img src="../static/images/sitekgram1.jpg" alt="" class="img">
+                                                    <div class="label">Видео</div>
+                                                </div>
+                                            </a>
+
+                                            <div class="col__info">
+                                                <h3 class="info-title">
+                                                    <a href="">Продольно-фрезерный станок СИ620Ф4</a>
+                                                </h3>
+                                                <div class="info-text">
+                                                    Друзья, рады поделиться видео с предварительной приемки нашего
+                                                    специального
+                                                    ...
+                                                </div>
+
+                                                <ul class="category">
+                                                    <li class="category__item"><a href="#">Продольно-фрезерный</a> </li>
+                                                    <li class="category__item"><a href="#">...</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 sitekgram__col">
+                                        <div class="col__inner">
+                                            <a href="">
+                                                <div class="col__img">
+                                                    <img src="../static/images/sitekgram2.jpg" alt="" class="img">
+                                                    <div class="label">Пресса</div>
+                                                </div>
+                                            </a>
+                                            <div class="col__info">
+                                                <h3 class="info-title">
+                                                    <a href="">Ситек Инжиринг – резидент Парка высоких технологий</a>
+                                                </h3>
+                                                <div class="info-text">
+                                                    Рады поделиться новостью с приемки нашего специального
+                                                    продольно-фрезерного
+                                                    станка с ЧПУ ...
+                                                </div>
+
+                                                <ul class="category">
+                                                    <li class="category__item"><a href="#">Модернизация</a> </li>
+                                                    <li class="category__item"><a href="#">Машиностроение</a> </li>
+                                                    <li class="category__item"><a href="#">...</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 sitekgram__col">
+                                        <div class="col__inner">
+                                            <a href="">
+                                                <div class="col__img">
+                                                    <img src="../static/images/sitekgram3.jpg" alt="" class="img">
+                                                    <div class="label">Новости</div>
+                                                </div>
+                                            </a>
+                                            <div class="col__info">
+                                                <h3 class="info-title">
+                                                    <a href="">Абразивно-отрезной станок СИ400-30Л</a>
+                                                </h3>
+                                                <div class="info-text">
+                                                    Абразивно-отрезной станок СИ400-30Л предназначен для резки
+                                                    абразивным кругом
+                                                    диаметром до ...
+                                                </div>
+
+                                                <ul class="category">
+                                                    <li class="category__item"><a href="#"> Машиностроение</a> </li>
+                                                    <li class="category__item"><a href="#">...</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{{> section/information}}
+
+{{>layout/footer}}
+

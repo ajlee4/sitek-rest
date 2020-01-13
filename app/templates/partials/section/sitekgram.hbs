@@ -1,0 +1,249 @@
+<section class="section sitekgram">
+    <div class="container">
+        <div class="section__inner">
+            <div class="section__top">
+                <h2 class="section__title">Sitekgram</h2>
+                <h3 class="section__subtitle">Все публикации о группе компаний «Ситек», деятельности и станках, видео,
+                    посты в социальных сетях. Просматривайте интересующие вас материалы по выбранным в начале страницы
+                    параметрам.</h3>
+                <div class="section__link">
+                    <a href="">Смотреть все 100 записей <svg width="6" height="12" viewBox="0 0 6 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 11L5 6L1 1" stroke="#003896" stroke-opacity="0.5" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <form class="sitekgram__filter">
+
+                    <div class="sitekgram__filter-left">
+                        <div class="filter-field">
+                            <ul class="filter-field__list">
+                                <li class="list-item"> {{> ui/checkbox id=12 name='news' value='Видео' label='Видео'}}
+                                    <div class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=13 name='news'  value='Twitter'      label='Twitter'}}<div
+                                        class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=14  name='news'   value='Пресса'    label='Пресса'}}<div
+                                        class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=15  name='news'  value='Instagram'        label='Instagram'}}<div
+                                        class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=16  name='news'  value='Новости компании' label='Новости компании'}}
+                                    <div class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=17 name='news'  value='Linkedin' label='Linkedin'}}<div
+                                        class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=18 name='news' value='Документы' label='Документы'}}<div
+                                        class="count-field"> <span class="count">8</span></div>
+                                </li>
+                                <li class="list-item">
+                                    {{> ui/checkbox id=19  name='news' value='Facebook' label='Facebook'}}<div
+                                        class="count-field"> <span class="count">8</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sitekgram__filter-right">
+                        <div class="filter-field">
+                            <ul class="filter-field__list category">
+                                <div class="category__row">
+                                    <li class="category__item"><a href="">Модернизация</a></li>
+                                    <li class="category__item"><a href="">Машиностроение</a></li>
+                                </div>
+                                <div class="category__row">
+                                    <li class="category__item"><a href="">Продольно-фрезерные</a></li>
+                                    <li class="category__item"><a href="">Продольно-строгальные</a></li>
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-reset-filter" type="reset"><span>Очистить фильтр</span></button>
+
+                </form>
+            </div>
+            <div class="sitekgram__result-field">
+                <div class="result">Показано 3 из <span>27</span></div>
+                <div class="sitekgram-list">
+                    <div class="row sitekgram">
+                        <div class="col-lg-4 col-md-6 sitekgram__col">
+                            <div class="col__inner">
+                                <a href="">
+                                    <div class="col__img">
+                                        <img src="../static/images/sitekgram1.jpg" alt="" class="img">
+                                        <div class="label">Видео</div>
+                                    </div>
+                                </a>
+
+                                <div class="col__info">
+                                    <h3 class="info-title">
+                                        <a href="">Продольно-фрезерный станок СИ620Ф4</a>
+                                    </h3>
+                                    <div class="info-text">
+                                        Друзья, рады поделиться видео с предварительной приемки нашего специального
+                                        ...
+                                    </div>
+
+                                    <ul class="category">
+                                        <li class="category__item"><a href="#">Продольно-фрезерный</a> </li>
+                                        <li class="category__item"><a href="#">...</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 sitekgram__col">
+                            <div class="col__inner">
+                                <a href="">
+                                    <div class="col__img">
+                                        <img src="../static/images/sitekgram2.jpg" alt="" class="img">
+                                        <div class="label">Пресса</div>
+                                    </div>
+                                </a>
+                                <div class="col__info">
+                                    <h3 class="info-title">
+                                        <a href="">Ситек Инжиринг – резидент Парка высоких технологий</a>
+                                    </h3>
+                                    <div class="info-text">
+                                        Рады поделиться новостью с приемки нашего специального продольно-фрезерного
+                                        станка с ЧПУ ...
+                                    </div>
+
+                                    <ul class="category">
+                                        <li class="category__item"><a href="#">Модернизация</a> </li>
+                                        <li class="category__item"><a href="#">Машиностроение</a> </li>
+                                        <li class="category__item"><a href="#">...</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div href="" class="col-lg-4 col-md-6 sitekgram__col">
+                            <div class="col__inner">
+                                <a href="">
+                                    <div class="col__img">
+                                        <img src="../static/images/sitekgram3.jpg" alt="" class="img">
+                                        <div class="label">Новости</div>
+                                    </div>
+                                </a>
+                                <div class="col__info">
+                                    <h3 class="info-title">
+                                        <a href="">Абразивно-отрезной станок СИ400-30Л</a>
+                                    </h3>
+                                    <div class="info-text">
+                                        Абразивно-отрезной станок СИ400-30Л предназначен для резки абразивным кругом
+                                        диаметром до ...
+                                    </div>
+
+                                    <ul class="category">
+                                        <li class="category__item"><a href="#"> Машиностроение</a> </li>
+                                        <li class="category__item"><a href="#">...</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="sitekgram__list-expand"><span>Показать больше</span>
+                        <div class="arrow-down"><svg width="19" height="11" viewBox="0 0 19 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.5607 0.43934C19.1464 1.02513 19.1464 1.97487 18.5607 2.56066L10.5607 10.5607C9.97487 11.1464 9.02513 11.1464 8.43934 10.5607L0.43934 2.56066C-0.146446 1.97487 -0.146446 1.02513 0.439341 0.439339C1.02513 -0.146447 1.97487 -0.146447 2.56066 0.439339L9.5 7.37868L16.4393 0.43934C17.0251 -0.146447 17.9749 -0.146447 18.5607 0.43934Z"
+                                    fill="#0C4DA2" fill-opacity="0.4" />
+                            </svg></div>
+                    </a>
+                </div>
+                <div class="sitekgram-sublist">
+                    <div class="row sitekgram">
+                        <div class="col-lg-4 col-md-6 sitekgram__col">
+                            <div class="col__inner">
+                                <a href="">
+                                    <div class="col__img">
+                                        <img src="../static/images/sitekgram1.jpg" alt="" class="img">
+                                        <div class="label">Видео</div>
+                                    </div>
+                                </a>
+
+                                <div class="col__info">
+                                    <h3 class="info-title">
+                                        <a href="">Продольно-фрезерный станок СИ620Ф4</a>
+                                    </h3>
+                                    <div class="info-text">
+                                        Друзья, рады поделиться видео с предварительной приемки нашего специального
+                                        ...
+                                    </div>
+
+                                    <ul class="category">
+                                        <li class="category__item"><a href="#">Продольно-фрезерный</a> </li>
+                                        <li class="category__item"><a href="#">...</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 sitekgram__col">
+                            <div class="col__inner">
+                                <a href="">
+                                    <div class="col__img">
+                                        <img src="../static/images/sitekgram2.jpg" alt="" class="img">
+                                        <div class="label">Пресса</div>
+                                    </div>
+                                </a>
+                                <div class="col__info">
+                                    <h3 class="info-title">
+                                        <a href="">Ситек Инжиринг – резидент Парка высоких технологий</a>
+                                    </h3>
+                                    <div class="info-text">
+                                        Рады поделиться новостью с приемки нашего специального продольно-фрезерного
+                                        станка с ЧПУ ...
+                                    </div>
+
+                                    <ul class="category">
+                                        <li class="category__item"><a href="#">Модернизация</a> </li>
+                                        <li class="category__item"><a href="#">Машиностроение</a> </li>
+                                        <li class="category__item"><a href="#">...</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 sitekgram__col">
+                            <div class="col__inner">
+                                <a href="">
+                                    <div class="col__img">
+                                        <img src="../static/images/sitekgram3.jpg" alt="" class="img">
+                                        <div class="label">Новости</div>
+                                    </div>
+                                </a>
+                                <div class="col__info">
+                                    <h3 class="info-title">
+                                        <a href="">Абразивно-отрезной станок СИ400-30Л</a>
+                                    </h3>
+                                    <div class="info-text">
+                                        Абразивно-отрезной станок СИ400-30Л предназначен для резки абразивным кругом
+                                        диаметром до ...
+                                    </div>
+
+                                    <ul class="category">
+                                        <li class="category__item"><a href="#"> Машиностроение</a> </li>
+                                        <li class="category__item"><a href="#">...</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

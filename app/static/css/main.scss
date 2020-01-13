@@ -1,0 +1,36 @@
+@import 'imports';
+
+@import 'layout/header';
+
+@import 'layout/footer';
+@import 'layout/popup';
+@import 'layout/wrapper';
+
+@import 'ui/buttons';
+@import 'ui/form';
+
+@import 'components/dropdown';
+@import 'components/radio';
+@import 'components/checkbox';
+@import 'components/loader';
+@import 'components/slider';
+@import 'components/tabs';
+@import 'components/breadcrumbs';
+@import 'components/select';
+@import 'components/burger';
+
+@import 'section/home.scss';
+@import 'section/type.scss';
+@import 'section/bench.scss';
+@import 'section/calc.scss';
+@import 'section/news.scss';
+@import 'section/sitekgram.scss';
+
+@import 'blocks/btn-list';
+@import 'blocks/aside';
+
+
+@import 'pages/ui-toolkit';
+@import 'pages/home';
+@import 'pages/about';
+

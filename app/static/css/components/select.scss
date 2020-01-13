@@ -1,0 +1,33 @@
+.select-hidden {
+  display: none;
+  visibility: hidden;
+}
+.select {
+  position: relative;
+  cursor: pointer;
+  margin-left: 7px;
+}
+.select-options {
+    display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+   padding: 8px 15px;
+  background-color: #fff;
+
+  li {
+      &:hover {
+          color: #333333;
+      }
+  }
+
+}
+.select-styled {
+  display: inline-block;
+  position: relative;
+ color: #333333;
+ border-bottom: 1px solid #000;
+ line-height: 16px;
+  z-index: 2;
+}

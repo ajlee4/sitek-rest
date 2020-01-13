@@ -1,0 +1,418 @@
+.content {
+    &.about-page {
+       section {
+        &.main-section {
+            .section {
+                &__inner {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 90px;   
+                    position: relative;
+                    .download-link {
+                        font-size: 14px;
+                        line-height: 21px;
+                        @include firasans-normal;
+                        color: #0C4DA2;
+                        font-style: italic;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        svg {
+                            margin-right: 1px;
+                        }
+                    }
+               .secondary-btn {
+                   max-width: 0 auto;
+                   svg {
+                       margin-left: 15px;
+                   }
+               }
+                }
+                &__title {
+                text-align: center;
+                font-size: 42px;
+                line-height: 55px;
+                color: #333333;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                @include firasans-bold;
+              
+                }
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    .video {
+                        position: relative;
+                        margin-bottom: 22px;
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            background: rgba(12, 77, 162, 0.7);
+                            border-radius: 6px;
+                            content: '';
+                        }
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            @include sprite('play');
+                            top: 50%;
+                            left: 50%;
+                            margin-top: -37px;
+                            margin-left: -37px;
+                        }
+                    }
+                   p {
+                       font-size: 16px;
+                       line-height: 24px;
+                       color: #333333;
+                       @include firasans-normal;
+                   }
+                }
+            }
+        }
+        &.primary-section {
+            .section {
+                &__inner {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    background: rgba(12, 77, 162, 0.07);
+                    position: relative;
+                    &:before,&:after {
+                      position: absolute;
+                      top: 0;
+                      right: 100%;
+                      width: 100%;
+                      height: 100%;
+                      background: rgba(12, 77, 162, 0.07);
+                      content: '';
+                      display: block;
+                    }
+                    &:after {
+                        left: 100%;
+                    }
+                   .add-field {
+                       font-size: 14px;
+                       line-height: 21px;
+                       color: #0C4DA2;
+                      font-style: italic !important;
+                      position: absolute;
+                      top: 25px;
+                      cursor: pointer;
+                       @include firasans-normal;
+                       svg {
+                           margin-right: 10px;
+                       }
+
+                   }
+                }
+                &__title {
+                    font-size: 32px;
+                    line-height: 45px;
+                    @include firasans-bold;
+                    color: #333333;
+                }
+                &__info {
+                    p {
+                        @include firasans-normal;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+        &.secondary-section {
+            .section {
+                &__inner {
+                    padding-top: 60px;
+                 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                &__title {
+ font-size: 26px;
+ line-height: 36px;
+ text-align: center;
+ @include firasans-bold;
+ margin-bottom: 32px;
+                }
+                &__info {
+                 p {
+                    @include firasans-normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #333333;
+                 }
+                 margin-bottom: 20px;
+                }
+            }
+        }
+        &.sitekgram {
+            .section {
+              &__title {
+                margin-top: 20px;
+                margin-bottom: 40px;
+                text-transform: uppercase;
+                font-size: 42px;
+                line-height: 55px;
+              }
+              &__top {
+                box-shadow: none;
+                padding-top: 0;
+                padding-bottom: 0;
+              }
+              &__inner {
+                padding-top: 30px;
+                padding-bottom: 30px;
+              }
+              &__info {
+                @include firasans-normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #333333;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+            .sitekgram {
+              &__filter {
+                box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                padding: 40px;
+                border-radius: 15px;
+                overflow: hidden;
+             
+                display: block;
+                &-bottom {
+                    display: flex;
+                }
+           
+                .filter-subfield__list {
+                    display: flex;
+                    justify-content: space-between;
+                   padding-top: 35px;
+                    padding-bottom: 35px;
+                }
+                .section__link {
+                    position: absolute;
+                    top: 24px;
+                    right: 24px;
+
+                }
+                .btn-reset-filter {
+                    bottom: 0;
+                    right: 0;
+                }
+             
+                &-left {
+                  &:after {
+                    @include mobile {
+                      display: none;
+                    }
+                  }
+                }
+                &-right {
+                  width: 50%;
+                  padding-left: 40px;
+             
+                 @include mobile {
+                   padding-left: 0;
+                   width: 100%;
+                 }
+                  .filter-field {
+                    &__title {
+                      font-size: 16px;
+                      line-height: 19px;
+                      color: #333333;
+                      @include firasans-normal;
+                      margin-bottom: 20px;
+                    }
+                    &__list {
+                      display: flex;
+                      flex-wrap: wrap;
+                      margin-right: -5px;
+                      margin-left: -5px;
+                      @include tablet-and-phone {
+                        flex-direction: column;
+                      }
+                      .list-item {
+                        width: 50%;
+                        @include tablet-and-phone {
+                          width: 100%;
+                        }
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        margin-bottom: 22px;
+                      }
+                    }
+                  }
+                }
+                &-left {
+                  @include tablet {
+                    width: 50%;
+                    padding-right: 40px;
+                    border-right: 2px solid rgba(12, 77, 162, 0.1); ;
+                    &:after {
+                      display: none;
+                    }
+                  }
+                  .filter-field {
+                    &__list {
+                    @include tablet {
+                      flex-direction: column;
+                      .list-item {
+                        width: 100%;
+                      }
+                    }
+                    }
+                  }
+                }
+              }
+              &__subfield {
+                padding: 20px 40px;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                .filter-subfield__title {
+                  font-size: 18px;
+                  line-height: 23px;
+                  @include firasans-bold;
+                  text-transform: uppercase;
+                  position: relative;
+                  display: none;
+                  @include mobile {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .sitekgram-mobile-wrap {
+                      transform: rotate(180deg);
+                      transition: 0.3s;
+                      &.open {
+                        transform: rotate(0);
+                      }
+                    }
+                  }
+                }
+                .filter-subfield__list {
+                  display: flex;
+                  @include mobile {
+                    flex-direction: column;
+                    margin-top: 20px;
+                    display: none;
+                  }
+                  .list-item {
+                    margin-right: 30px;
+                    @include mobile {
+                      margin-right: 0;
+                      margin-bottom: 15px;
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
+                    }
+                    &:last-child {
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+            }
+            .sitekgram__result-field {
+              .sitekgram__col {
+                &:last-child {
+                 @include tablet {
+                   display: block;
+                 }
+                }
+               }
+              .result {
+                display: flex;
+                justify-content: flex-start;
+                 span {
+                   margin-left: 5px;
+                 }
+                align-items: center;
+         
+                .btn-reset-filter {
+                  width: 200px;
+                  height: 40px;
+                  border-radius: 0;
+                }
+              }
+            }
+            .count-field {
+                background-color: #0c4da2;
+                color: #fff;
+                display: inline-block;
+                text-align: center;
+                border-radius: 100%;
+                margin-left: 6px;
+                .count {
+                  display: inline-block;
+                  padding: 4px 8px;
+                  font-size: 14px;
+                  line-height: 17px;
+                  color: #fff;
+                  @include firasans-normal;
+                }
+              }
+          }
+        &.history-section {
+            .section {
+                &__inner {
+                    padding-top: 30px;
+                    padding-bottom: 80px;
+                }
+                &__title {
+                    font-size: 32px;
+                    line-height: 42px;
+                    @include firasans-bold;
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+                &__bottom {
+                    display: flex;
+                    .section {
+                        &__right {
+                             width: 50%;
+                             padding-left: 20px;
+                          p {
+                              font-size: 16px;
+                              line-height: 24px;
+                              @include firasans-normal;
+                              color: #222222;
+                          }
+                          .section__right-link {
+                              font-size: 16px;
+                              line-height: 24px;
+                              @include firasans-bold;
+                              color: rgba(0, 56, 150, 0.5);
+                              text-transform: uppercase;
+                              display: flex;
+                              align-items: center;
+                              svg {
+                                  margin-left: 10px;
+                              }
+                          }
+                             
+                        }
+                        &__left {
+                            width: 50%;
+                            img {
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       }
+    }
+}
