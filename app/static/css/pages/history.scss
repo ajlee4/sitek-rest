@@ -1,0 +1,121 @@
+.content {
+    &.history-page {
+        .content__info {
+            width: 100%;
+            padding-left: 0;
+           max-width: 100%;
+        }
+        .section {
+            &.history-section {
+                .section {
+                    &__title {
+                      font-size: 42px;
+                      line-height: 55px;
+                      color: #333333;
+                      text-align: center;
+                      @include firasans-bold;
+                      margin-bottom: 50px;
+                    }
+                    &__inner {
+                          @include tablet {
+                              padding-bottom: 60px;
+                          } 
+                    }
+                    &__info {
+
+                    }
+                    &__elems {
+                        position: relative;
+                        @include tablet {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                        }
+                        .timeline {
+                            position: absolute;
+                            top: 10%;
+                            left: 50%;
+                            margin-left: -15px;
+                            @include tablet {
+                                display: none;
+                            }
+                        &.tablet {
+                            display: none;
+                            @include tablet {
+                                display: block;
+                                left: 0;
+                                margin-left: 0;
+                                top: 5%;
+                            }
+                        }
+                        }
+                    }
+                    &__elem {
+                        display: flex;
+                        margin-bottom: 80px;
+                        @include tablet {
+                           flex-direction: column;
+                           align-items: flex-end;
+                           width: 80%;
+                           margin-bottom: 25px;
+                           &:nth-child(2n) {
+                               flex-direction: column-reverse;
+                           }
+                        }
+                        .elem-card {
+                            padding: 15px;
+                            border-radius: 15px;
+                            box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                            display: flex;
+                            .card-img {
+                                img {
+                                    border-radius: 15px;
+                                    max-width: 160px;
+                                    max-height: 160px;
+                                }
+                            }
+                            .card-info {
+                                padding-left: 15px;
+                            }
+                        }
+                        .years {
+                            font-size: 140px;
+                            line-height: 210px;
+                            color: rgba(12, 77, 162, 0.07);
+                            @include firasans-bold;
+                            @include tablet {
+                                font-size: 100px;
+                                line-height: 100px;
+                                padding-bottom: 20px;
+                            }
+                        }
+                        .elem-left {
+                            width: 50%;
+                            padding-right: 40px;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            @include tablet {
+                                width: 100%;
+                                padding-right: 0;
+                                justify-content: flex-start;
+                            }
+                        }
+                        .elem-right {
+                            width: 50%;
+                           padding-left: 40px;
+                           display: flex;
+                       
+                           align-items: center;
+                           @include tablet {
+                            width: 100%;
+                            padding-left: 0;
+                            justify-content: flex-start;
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

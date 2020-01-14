@@ -56,4 +56,12 @@ $(document).ready(function() {
       .children('.sitekgram-mobile-wrap')
       .toggleClass('open');
   });
+
+
+  $('#catalog-page-text-wrap').on('click',function(){
+    $(this).hide();
+    $('#catalog-text-bottom').slideDown({
+      duration: 200,
+    });
+  })
 });
