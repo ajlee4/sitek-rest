@@ -1,0 +1,560 @@
+.content {
+    &.sitek-scope-page {
+        .content__info {
+            width: 100%;
+            padding-left: 0;
+            max-width: 100%;
+          }
+          .section {
+            &.sitek-scope-section {
+              .section {
+                &__title {
+                  @include firasans-bold;
+                  font-size: 42px;
+                  line-height: 55px;
+                  color: #333333;
+                  margin-bottom: 40px;
+                  text-align: center;
+                }
+               &__inner {
+              
+               } 
+               &__info {
+                   padding-bottom: 50px;
+                   .article {
+                       display: flex;
+                       justify-content: space-between;
+                       &__left {
+                           width: 70%;
+                           padding-left: 30px;
+                           .article {
+                               &__title {
+                                font-size: 26px;
+                                line-height: 36px;
+                                color: #333333;
+                                margin-bottom: 24px;
+                                @include firasans-bold;
+                               }
+                               &__text {
+                                margin-bottom: 24px;
+                                p {
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    color: #333333;
+                                    @include firasans-normal;
+                                }
+                               }
+                               &__link {
+                                font-size: 16px;
+                                line-height: 23px;
+                                text-transform: uppercase;
+                                display: flex;
+                                align-items: center;
+                                @include firasans-bold;
+                                color: rgba(0, 56, 150, 0.5);
+                                svg {
+                                  margin-left: 10px;
+                                }
+                                &:hover {
+                                  color: rgba(0, 56, 150, 0.7);
+                                }
+                               }
+                           }
+                       }
+                       &__right {
+                           .article__link {
+                               display: inline-block;
+                            .sitekgram-link {
+                                height: 194px;
+                                width: 170px;
+                                padding: 20px 31px;
+                                border-radius: 15px;
+                                display: block;
+                                background: linear-gradient(180deg, #E4E4E4 0%, #F3F3F3 100%);
+                                position: relative;
+                                &:hover {
+                                  .sitekgram-link__left {
+                                  
+                                    transition: 0.2s;
+                                   width: 50px;
+                                   opacity: 1;
+                                   
+                                  }
+                                }
+                                &__left {
+                                  position: absolute;
+                                  top: 0;
+                                  left: 0;
+                                  height: 100%;
+                                  width: 0px;
+                               
+                                  opacity: 0;
+                                  border-radius: 15px 0px 0px 15px;
+                                  padding: 22px 15px;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                                  svg {
+                                    fill: rgba(255, 255, 255, 0.8);
+                                  }
+                                  &.blue {
+                                    background: rgba(12, 77, 162, 0.7);
+                                  }
+                                  &.yellow {
+                                    background: rgba(247, 181, 18, 0.7);
+                                  }
+                                  &.light-blue {
+                                    background: rgba(0, 125, 165, 0.7);
+                                  }
+                                }
+                              }
+                              .sitekgram-link__text {
+                                font-size: 18px;
+                                line-height: 25px;
+                                @include firasans-bold;
+                                text-align: center;
+                                margin-top: 16px;
+                              }
+                           }
+                       }
+                   }
+               }
+         
+               
+             
+              }
+              .button-wrap {
+                  margin-top: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+      
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: rgba(12, 77, 162, 0.6);
+                  display: flex;
+                  align-items: center;
+      
+                  &:hover {
+                    cursor: pointer;
+                    .arrow-down {
+                      background: rgba(12, 77, 162, 0.2);
+                      transition: 0.3s;
+                    }
+                  }
+                  .arrow-down {
+                    height: 46px;
+                    width: 46px;
+                    border-radius: 50%;
+                    background: rgba(12, 77, 162, 0.07);
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 10px;
+                    svg {
+                      position: absolute;
+                      top: 50%;
+                      margin-top: -5px;
+                      left: 50%;
+                      margin-left: -9px;
+                    }
+                  }
+                }
+            }
+            &.reference-section {
+                .section {
+                    &__inner {
+                        padding-bottom: 80px;
+                        position: relative;
+                        .add-field {
+                            font-size: 14px;
+                            line-height: 21px;
+                            color: #0C4DA2;
+                           font-style: italic !important;
+                           position: absolute;
+                           top: 0px;
+                           right: 0px;
+                        
+                           cursor: pointer;
+                            @include firasans-normal;
+                            svg {
+                                margin-right: 10px;
+                            }
+        
+                        }
+                    }
+                    &__title {
+                        font-size: 26px;
+                        line-height: 36px;
+                        color: #333333;
+                        text-align: center;
+                        @include firasans-bold;
+                        margin-bottom: 50px;
+                    }
+                    &__info {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 60px;
+                        &-left {
+                            width: 30%;
+                            padding-right: 30px;
+                            .title {
+                                font-size: 18px;
+                                line-height: 18px;
+                                @include firasans-bold;
+                                color: #333333;
+                                margin-bottom: 40px;
+                            }
+                            .logo {
+                                margin-bottom: 40px;
+                            }
+                            .text {
+                                font-size: 16px;
+                                line-height: 24px;
+                                @include firasans-normal;
+                            }
+                        }
+                        &-right {
+                            width: 60%;
+                          
+                            .section__info-table {
+                                width: 100%;
+                                box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                                border-radius: 10px;
+                                padding: 15px 10px;
+                                position: relative;
+                                z-index: 100;
+                                background-color: #fff;
+                               .table {
+                                
+                                .title {
+                                    border-top: none;
+                                    border-bottom: none;
+                                    font-size: 14px;
+                                    line-height: 14px;
+                                    @include firasans-bold;
+                                    color: #333333;
+                                }
+                                .table-body {
+                                 
+                                    tr {
+                                     
+                                    }
+                                    td {
+                                        font-size: 14px;
+                                        line-height: 21px;
+                                        @include firasans-normal;
+                                        color: #333333;
+                                        a {
+                                            &:hover {
+                                                text-decoration: underline;
+                                            }
+                                        }
+            
+                                    }
+                                    .left {
+                                        width: 60%;
+                                        border-right: 1px solid #dee2e6;
+                                    }
+                                   .right {
+                                       width: 20%;
+                                      
+                                        border-right: 1px solid #dee2e6;
+                                        &:last-child {
+                                            border-right: 0px;
+                                        }
+                                       
+                                   }
+                                }
+                               }
+                            }
+                        }
+                    }
+                    &__bottom {
+                        padding-top: 50px;
+                        padding-bottom: 5px;
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 50%;
+                            background: rgba(12, 77, 162, 0.07);
+                            content: '';
+                            z-index: -1;
+                        }
+                        &:after {
+                            position: absolute;
+                            top: 0;
+                            right: 100%;
+                            height: 100%;
+                            width: 100vw;
+                            background: rgba(12, 77, 162, 0.07);
+                            content: '';
+                            z-index: -1; 
+                        }
+
+                    }
+                   
+                }
+            }
+            &.referense-newsbench-section {
+                .section {
+                    &__title {
+                        font-size: 26px;
+                        line-height: 36px;
+                        color: #333333;
+                        @include firasans-bold;
+                        margin-bottom: 60px;
+                        text-align: center;
+                    }
+                    &__table {
+                        width: 100%;
+                        box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                        border-radius: 10px;
+                        padding: 15px 10px;
+                        position: relative;
+                        z-index: 100;
+                        background-color: #fff;
+                       .table {
+                        
+                        .title {
+                            border-top: none;
+                            border-bottom: none;
+                            font-size: 14px;
+                            line-height: 14px;
+                            @include firasans-bold;
+                            color: #333333;
+                        }
+                        .table-body {
+                         
+                            tr {
+                             
+                            }
+                            td {
+                                font-size: 14px;
+                                line-height: 21px;
+                                @include firasans-normal;
+                                color: #333333;
+                                a {
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+    
+                            }
+                            .left {
+                                width: 60%;
+                                border-right: 1px solid #dee2e6;
+                            }
+                           .right {
+                               width: 20%;
+                              
+                                border-right: 1px solid #dee2e6;
+                                &:last-child {
+                                    border-right: 0px;
+                                }
+                               
+                           }
+                        }
+                       }
+                    }
+                    &__info {
+                        padding-left: 100px;
+                        padding-right: 100px;
+                    }
+                    &__inner {
+                        padding-bottom: 80px;
+                        position: relative;
+                        .add-field {
+                            font-size: 14px;
+                            line-height: 21px;
+                            color: #0C4DA2;
+                           font-style: italic !important;
+                           position: absolute;
+                           top: 0px;
+                           right: 0px;
+                        
+                        
+                           cursor: pointer;
+                            @include firasans-normal;
+                            svg {
+                                margin-right: 10px;
+                            }
+        
+                        }
+                    }
+                }
+            }
+          &.nomenclature-section{
+              .section {
+                  &__title {
+                    font-size: 26px;
+                    line-height: 36px;
+                    color: #333333;
+                    @include firasans-bold;
+                    text-align: center;
+                    margin-bottom: 40px;
+                  }
+                  &__inner {
+                      padding-top: 50px;
+                      padding-bottom: 50px;
+                      background-color: #fff;
+                      background: rgba(12, 77, 162, 0.07);
+                      &:before {
+                          content: '';
+                          display: block;
+                          position: absolute;
+                          top: 0;
+                          left: 100%;
+                          height: 100%;
+                          width: 100vw;
+
+                          background: rgba(12, 77, 162, 0.07);
+
+                      }
+                      &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 100%;
+                        height: 100%;
+                        width: 100vw;
+
+                        background: rgba(12, 77, 162, 0.07);   
+                      }
+                      position: relative;
+                      .details-list {
+                          padding-left: 100px;
+                          padding-right: 100px;
+                          display: flex;
+                          justify-content: space-between;
+                          margin-left: -10px;
+                          margin-right: -10px;
+                        .list-item {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        .list-link {
+                            width: 300px;
+                            height: 350px;
+                            display: block;
+                            box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                            border-radius: 15px;
+                            overflow: hidden;
+                            position: relative;
+                        
+                            &__text {
+                                background-color: #fff;
+                                height: 40%;
+                                font-size: 18px;
+                                line-height: 23px;
+                                @include firasans-bold;
+                                color: #333333;
+                                text-transform: uppercase;
+                                padding: 25px 25px 25px 65px;
+                            }
+                            &__img {
+                                display: flex;
+                                justify-content: center;
+                                height: 60%;
+                                padding-left: 50px;
+
+                            }
+                            .left {
+                                width: 50px;
+                                height: 100%;
+                                background-color: rgba(12, 77, 162, 0.7);
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                svg {
+                                    position: absolute;
+                                    top: 22px;
+                                    left: 15px;
+                                 
+                                }
+                            }
+                        }
+                    }
+                  }
+                 
+
+              }
+          }
+          &.desc-section {
+              .section {
+                  &__inner {
+                      padding-top: 80px;
+                      padding-bottom: 80px;
+                      display: flex;
+                      justify-content: space-between;
+                  }
+                  &__left {
+                      width: 50%;
+                      padding-right: 30px;
+                      &-title {
+                          @include firasans-bold;
+                          font-size: 26px;
+                          line-height: 36px;
+                          color: #333333;
+                          margin-bottom: 25px;
+                      }
+                      &-text {
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #333333;
+                        @include firasans-normal;
+                        margin-bottom: 25px;
+                      }
+                      &-link {
+                        font-size: 16px;
+                        line-height: 23px;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        @include firasans-bold;
+                        color: rgba(0, 56, 150, 0.5);
+                        svg {
+                          margin-left: 10px;
+                        }
+                        &:hover {
+                          color: rgba(0, 56, 150, 0.7);
+                        }
+                      }
+                  }
+                  &__right {
+                      width: 50%;
+                      display: flex;
+                      justify-content: center;
+                  }
+              }
+          }
+          }
+    }
+}
+
+.subtext-scope-section {
+    .section {
+        &__title {
+            font-size: 32px;
+            line-height: 45px;
+            color: #333333;
+            @include firasans-bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        &__info {
+            font-size: 16px;
+            line-height: 24px;
+            color: #333333;
+            @include firasans-normal;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        &__inner {
+            padding-bottom: 80px;
+        }
+    }
+}

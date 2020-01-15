@@ -1,0 +1,102 @@
+.content {
+    &.book-page {
+        .content__info {
+            width: 100%;
+            padding-left: 0;
+            max-width: 100%;
+          }
+          .section {
+         &.book-section {
+             .section {
+                 &__title {
+                     font-size: 42px;
+                     line-height: 55px;
+                     @include firasans-bold;
+                     color: #333333;
+                     margin-bottom: 40px;
+                     text-align: center;
+                 }
+                 &__inner {
+                     padding-bottom: 80px;
+                 }
+                 &__slider {
+                     display: flex;
+                     justify-content: center;
+                     padding-bottom: 80px;
+                     .slider-primary {
+                         max-width: 970px;
+                        
+                         img {
+                             width: 100%;
+                             max-height: 488px;
+                         }
+                     }
+                 }
+                 &__info {
+                     &-top {
+                        .text {
+                            padding-left: 100px;
+                            padding-right: 100px;
+                            p {
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #333333;
+                                @include firasans-normal;
+                            }
+                            padding-bottom: 80px;
+                        }
+                     }
+                     &-bottom {
+                         .book-content {
+                             .title {
+                                 font-size: 32px;
+                                 line-height: 45px;
+                                 @include firasans-bold;
+                                 color: #333333;
+                                 margin-bottom: 32px;
+                                text-align: center;
+                             }
+                             .info {
+                                &-elem {
+                                    margin-bottom: 40px;
+                                    &-title {
+                                        font-size: 26px;
+                                        line-height: 36px;
+                                        @include firasans-bold;
+                                        color: #333333;
+                                        margin-bottom: 24px;
+                                    }
+                                    .list-block {
+                                        padding-left: 44px;
+                                        font-size: 20px;
+                                        line-height: 28px;
+                                        color: #333333;
+                                        margin-bottom: 24px;
+                                        .list-title {
+                                            @include firasans-bold;
+                                            .number {
+                                                margin-right: 15px;
+                                            }
+                                        }
+                                        .list-item {
+                                            @include firasans-normal;
+                                            padding-left: 25px;
+                                            margin-bottom: 6px;
+                                        }
+                                        .list-link {
+                                            &:hover {
+                                                text-decoration: underline;
+                                                color: #333333;
+                                            }
+                                        }
+                                    }
+                                }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+          }
+    }
+}

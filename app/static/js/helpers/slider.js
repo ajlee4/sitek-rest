@@ -19,6 +19,16 @@ $(document).ready(function() {
   $('.slider-primary').addClass('created')
   );
 
+  $('#slider-scope-min').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+
+
+  },
+  $('.slider-scope-min').addClass('created')
+  );
+
 });
 
 $(document).ready(function() {
