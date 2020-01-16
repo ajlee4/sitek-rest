@@ -29,6 +29,37 @@ $(document).ready(function() {
   $('.slider-scope-min').addClass('created')
   );
 
+
+  $('#configuration-bench-slider').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+
+
+  },
+  $('.configuration-bench-slider').addClass('created')
+  );
+
+  $('#advantages-bench-slider').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+
+
+  },
+  $('.advantages-bench-slider').addClass('created')
+  );
+
+  $('#scenario-slider').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+
+
+  },
+  $('.scenario-slider').addClass('created')
+  );
+ 
 });
 
 $(document).ready(function() {

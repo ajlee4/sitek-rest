@@ -1,5 +1,9 @@
 .content {
     &.about-page {
+      .aside__nav {
+        height: 538px;
+        overflow-y: auto;
+      }
        section {
         &.main-section {
             .section {
