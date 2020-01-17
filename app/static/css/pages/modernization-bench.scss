@@ -1,0 +1,266 @@
+.content {
+    &.modernization-bench-page {
+      section {
+        &.primary-section {
+          .section {
+            &__title {
+            }
+            &__inner {
+              padding-top: 50px;
+              padding-bottom: 20px;
+              position: relative;
+              .add-field {
+                font-size: 14px;
+                line-height: 21px;
+                color: #0c4da2;
+                font-style: italic !important;
+                position: absolute;
+                top: 0px;
+                cursor: pointer;
+                @include firasans-normal;
+                svg {
+                  margin-right: 10px;
+                }
+              }
+              .video-block {
+                padding-left: 30px;
+                padding-right: 30px;
+                .video {
+                    position: relative;
+                    margin-bottom: 22px;
+                  
+                    img {
+                        width: 100%;
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        background: rgba(12, 77, 162, 0.7);
+                        border-radius: 6px;
+                        content: '';
+                    }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        @include sprite('play');
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -37px;
+                        margin-left: -37px;
+                    }
+                }
+            }
+            }
+          
+            
+            &__info {
+             p {
+                font-size: 16px;
+                line-height: 24px;
+                @include firasans-normal;
+                color: #333333;
+             }
+            }
+          }
+        }
+        &.scenario-section {
+            .section {
+                &__title {
+                    font-size: 32px;
+                    line-height: 45px;
+                    @include firasans-bold;
+                    text-align: center;
+                    color: #333333;
+                    padding-top: 30px;
+                    margin-bottom: 56px;
+                }
+                &__inner {
+                  
+                }
+                &__elem {
+                    padding-bottom: 70px;
+                    .elem {
+                        &__title {
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                         margin-bottom: 35px;
+                           min-height: 100px;
+                           
+                            .number {
+                                @include firasans-bold;
+                                font-size: 100px;
+                                line-height: 100px;
+                                color: rgba(12, 77, 162, 0.07);
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            .text {
+                                font-size: 32px;
+                                line-height: 45px;
+                                color: #333333;
+                                @include firasans-bold;
+                                display: block;
+                                padding-right: 100px;
+                                padding-left: 100px;
+                            
+                                text-align: center;
+                            }
+                        }
+                        &__top {
+                            display: flex;
+                            padding-bottom: 40px;
+                            padding-top: 40px;
+                            position: relative;
+                            margin-bottom: 60px;
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                right: 40%;
+                                background: rgba(12, 77, 162, 0.07);
+                                content: '';
+                                display: block;
+                                width: 100vw;
+                                height: 100%;
+                            }
+                            &-left {
+                                width: 50%;
+                                padding-right: 30px;
+                                
+                            }
+                            &-right {
+                                width: 50%;
+                                position: relative;
+                                img {
+                                    max-width: 425px;
+                                    max-height: 250px;
+                                    position: relative;
+                                    top: 70px;
+                                }
+                                .article__link {
+                                    position: absolute;
+                                    bottom: 100%;
+                                    margin-top: -20px;
+                                    right: 0;
+                                    font-size: 16px;
+                                    line-height: 23px;
+                                    text-transform: uppercase;
+                                    display: flex;
+                                    align-items: center;
+                                    @include firasans-bold;
+                                    color: rgba(0, 56, 150, 0.5);
+                                    svg {
+                                      margin-left: 10px;
+                                    }
+                                    &:hover {
+                                      color: rgba(0, 56, 150, 0.7);
+                                    }
+                                }
+                            }
+                        }
+                        &__bottom {
+                            .title {
+                                font-size: 26px;
+                                line-height: 36px;
+                                color: #333333;
+                                text-transform: uppercase;
+                                margin-bottom: 80px;
+                               
+
+                            }
+                            .bottom-block {
+                                display: flex;
+                            }
+                            .bottom-left {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 20%;
+                                padding-right: 30px;
+                                position: relative;
+                                top: -40px;
+                                &__title {
+                                    font-size: 20px;
+                                    line-height: 28px;
+                                    color: #333333;
+                                    margin-bottom: 24px;
+                                    @include firasans-bold;
+                                }
+                            }
+                            .bottom-right {
+                                width: 100%;
+                                box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                                border-radius: 10px;
+                                padding: 15px 10px;
+                                position: relative;
+                             
+                               
+                                z-index: 100;
+                                background-color: #fff;
+                               .table {
+                                width: 100%;
+                                .title {
+                                    border-top: none;
+                                    border-bottom: none;
+                                    font-size: 14px;
+                                    line-height: 14px;
+                                    @include firasans-bold;
+                                    color: #333333;
+                                }
+                                .table-body {
+                                 
+                                    tr {
+                                     
+                                    }
+                                    td {
+                                        font-size: 14px;
+                                        line-height: 21px;
+                                        @include firasans-normal;
+                                        color: #333333;
+                                        .sitekgram-link {
+                                            font-size: 14px;
+                                            line-height: 21px;
+                                            @include firasans-normal;
+                                            color: #0C4DA2;
+                                            padding: 3px 10px;                             
+                                              background: rgba(92, 128, 188, 0.2);
+                                              border-radius: 6px;
+                                        }
+                                        a {
+                                            color: #0C4DA2;
+                                            &:hover {
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                      &.center {
+                                          width: 40%;
+                                      }  
+                                    }
+                              .td-sitekgram {
+                                  border-top-color: transparent;
+                              }
+                                   .td{
+                             
+                                      
+                                        border-right: 1px solid #dee2e6;
+                                     
+                                       
+                                   }
+                                }
+                               }  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      }
+    }
+  }
+  
