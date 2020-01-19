@@ -1,6 +1,6 @@
 .content {
     
-    &.director-page {
+    &.processing-page {
         .content__info {
             width: 100%;
             padding-left: 0;
@@ -18,25 +18,16 @@
                         text-align: center;
                     }
                     &__info {
+                     
                         display: flex;
-                        justify-content: space-between;
-                        align-items: flex-start;
+                      justify-content: center;
                         padding-bottom: 80px;
-                        .info-left {
-                            width: 50%;
-                            p {
-                                font-size: 16px;
-                                line-height: 24px;
-                                color: #333333;
-                                @include firasans-normal;
-                            }
-                        }
-                        .info-right {
-                            position: relative;
-                            top: -10px;
-                            width: 50%;
-                            padding-left: 20px;
-                        }
+                  .text {
+                    width: 770px;
+                    @include firasans-normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                  }
                     }
                     &__post {
                         position: relative;

@@ -40,6 +40,30 @@ $(document).ready(function() {
   $('.configuration-bench-slider').addClass('created')
   );
 
+
+  $('.configuration-bench-slider-created').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+
+
+  },
+ 
+  );
+
+ 
+
+  $('.clients-slider').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+
+
+  },
+ 
+  );
+
+
   $('#advantages-bench-slider').slick({
     dots: true,
     infinite: true,

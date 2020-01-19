@@ -324,13 +324,26 @@
               padding-left: 25px;
               padding-right: 25px;
             }
+            position: relative;
+            padding-right: 30px;
+           display: flex;
+           align-items: center;
+        .check-label {
+          display: inline-block;
+        }
+        .check-box{
+          display: inline-block;
+        }
             .count-field {
               background-color: #0c4da2;
               color: #fff;
               display: inline-block;
+              width: 24px;
+              height: 24px;
               text-align: center;
               border-radius: 100%;
               margin-left: 6px;
+            
               .count {
                 display: inline-block;
                 padding: 4px 8px;

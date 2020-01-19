@@ -1,0 +1,552 @@
+.content {
+    &.abrasive-bench-sitek-page {
+      section {
+        &.primary-section {
+          .section {
+            &__title {
+            }
+            &__inner {
+              padding-top: 50px;
+              padding-bottom: 20px;
+              position: relative;
+              .add-field {
+                font-size: 14px;
+                line-height: 21px;
+                color: #0c4da2;
+                font-style: italic !important;
+                position: absolute;
+                top: 0px;
+                cursor: pointer;
+                @include firasans-normal;
+                svg {
+                  margin-right: 10px;
+                }
+              }
+           
+            }
+          
+            &__text {
+                padding-top: 30px;
+                @include firasans-normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #333333;
+            }
+            &__info {
+                padding-top: 80px;
+                padding-bottom: 40px;
+                position: relative;
+                .add-field {
+                    top: 45px;
+                }
+           &-title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+           min-height: 100px;
+           text-transform: uppercase;
+           
+            .number {
+                @include firasans-bold;
+                font-size: 100px;
+                line-height: 100px;
+                color: rgba(12, 77, 162, 0.07);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .text {
+                font-size: 32px;
+                line-height: 45px;
+                color: #333333;
+                @include firasans-bold;
+                display: block;
+                padding-right: 100px;
+                padding-left: 100px;
+            
+                text-align: center;
+            }
+           }
+           &-top {
+            .section__elem {
+                padding-bottom: 70px;
+                padding-top: 70px;
+                position: relative;
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                .add-field {
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #0c4da2;
+                  font-style: italic !important;
+                  position: absolute;
+                  top: 30px;
+                  cursor: pointer;
+                  @include firasans-normal;
+                  svg {
+                    margin-right: 10px;
+                  }
+                }
+                .elem {
+                    &__title {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                     margin-bottom: 35px;
+                       min-height: 100px;
+                       
+                       
+                        .text {
+                            font-size: 32px;
+                            line-height: 45px;
+                            color: #333333;
+                            @include firasans-bold;
+                            display: block;
+                            padding-right: 100px;
+                            padding-left: 100px;
+                            text-transform: uppercase;
+                        
+                            text-align: center;
+                        }
+                    }
+                    &__top {
+                        display: flex;
+                        padding-bottom: 40px;
+                        padding-top: 40px;
+                        position: relative;
+                      
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            right: 40%;
+                            background: rgba(12, 77, 162, 0.07);
+                            content: '';
+                            display: block;
+                            width: 100vw;
+                            height: 100%;
+                        }
+                        &-left {
+                            width: 50%;
+                            padding-right: 30px;
+                            @include firasans-normal;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #333333;
+                        .left-title {
+                            font-size: 18px;
+                            line-height: 18px;
+                            @include firasans-bold;
+                            margin-bottom: 24px;
+                        }
+                            
+                        }
+                        &-right {
+                            width: 50%;
+                            position: relative;
+                            .download-link {
+                                font-size: 14px;
+                                line-height: 21px;
+                                @include firasans-normal;
+                                color: #0C4DA2;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                margin-top: 30px;
+                               
+                               
+                                svg {
+                                  padding: 10px;
+                                  width: 48px;
+                                  height: 48px;
+                                  background-color: #fff;
+                                  -webkit-border-radius: 4px;
+                                  border-radius: 4px;
+                                  margin-right: 8px;
+                                  box-shadow: 0 0 6px rgba(12,77,162,.2);
+                                }
+                               
+                            }
+                            img {
+                                max-width: 425px;
+                                max-height: 250px;
+                             
+                            }
+                          
+                        }
+                    }
+                 
+                }
+            }
+           }
+       
+            }
+          }
+          &.padding {
+              .section__inner {
+                  padding-top: 0;
+              }
+          }
+        }
+    
+        &.advantages-section {
+          .section {
+            &__inner {
+              padding-top: 60px;
+            
+            }
+            &-block {
+                &.slider {
+                    display: flex;
+                    justify-content: center;
+                }
+                .file-item {
+                    display: flex;
+               
+                  }
+                  .sitekgram-link {
+                    height: 194px;
+                    width: 170px;
+                    padding: 20px 31px;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    background: linear-gradient(180deg, #E4E4E4 0%, #F3F3F3 100%);
+                    position: relative;
+                    margin-bottom: 20px;
+               
+                  
+                
+                    &__left {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 100%;
+                      width: 50px;
+                   
+                   
+                      border-radius: 15px 0px 0px 15px;
+                      padding: 22px 15px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-between;
+                      svg {
+                        fill: rgba(255, 255, 255, 0.8);
+                      }
+                      &.blue {
+                        background: rgba(12, 77, 162, 0.7);
+                      }
+                      &.yellow {
+                        background: rgba(247, 181, 18, 0.7);
+                      }
+                      &.light-blue {
+                        background: rgba(0, 125, 165, 0.7);
+                      }
+                    }
+                  }
+                  .download-link {
+                      font-size: 14px;
+                      line-height: 21px;
+                      @include firasans-normal;
+                      color: #0C4DA2;
+                      display: inline-block;
+                      padding-left: 16px;
+                   
+                     
+                      svg {
+                        padding: 10px;
+                        width: 48px;
+                        height: 48px;
+                        background-color: #fff;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        margin-right: 8px;
+                        box-shadow: 0 0 6px rgba(12,77,162,.2);
+                      }
+                     
+                  }
+              margin-bottom: 60px;
+              &__title {
+                font-size: 26px;
+                line-height: 36px;
+                color: #333333;
+                text-align: center;
+                @include firasans-bold;
+                margin-bottom: 40px;
+                padding-left: 100px;
+                padding-right: 100px;
+                text-transform: uppercase;
+              }
+              .advantages-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                margin-left: -10px;
+                margin-right: -10px;
+                .list-item {
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  width: 33.3333%;
+                  font-size: 14px;
+                  line-height: 20px;
+                  @include firasans-normal;
+                  text-align: center;
+             
+                  &__title {
+                    color: #0C4DA2;
+                    padding-bottom: 8px;
+                    @include firasans-bold;
+                    border-bottom: 2px solid #0C4DA2;
+                    margin-bottom: 24px;
+                    min-height: 50px;
+                  }
+                  &__info {
+                    color: #333333;
+                    margin-bottom: 16px;
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+              }
+              &__info {
+                font-size: 16px;
+                line-height: 24px;
+                @include firasans-normal;
+                color: #333333;
+              }
+              &__slider {
+                padding-left: 50px;
+                padding-right: 50px;
+                .article__link {
+               
+                  font-size: 16px;
+                  line-height: 23px;
+                  text-transform: uppercase;
+                  display: flex;
+                  align-items: center;
+                  @include firasans-bold;
+                  color: rgba(0, 56, 150, 0.5);
+                  svg {
+                    margin-left: 10px;
+                  }
+                  &:hover {
+                    color: rgba(0, 56, 150, 0.7);
+                  }
+              }
+              }
+              &__table {
+                width: 100%;
+               
+                position: relative;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+             
+               .table-title {
+                   font-size: 16px;
+                   line-height: 24px;
+                   @include firasans-normal;
+                   margin-bottom: 16px;
+
+               }
+                z-index: 100;
+                background-color: #fff;
+               .table {
+                width: 100%;
+                box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+                border-radius: 10px;
+                padding: 15px 10px;
+                .title {
+                    border-top: none;
+                    border-bottom: none;
+                    font-size: 14px;
+                    line-height: 14px;
+                    @include firasans-bold;
+                    color: #333333;
+                }
+                .table-body {
+                 
+                    tr {
+                     
+                    }
+                    td {
+                        font-size: 14px;
+                        line-height: 21px;
+                        @include firasans-normal;
+                        color: #333333;
+                    
+                        a {
+                            color: #0C4DA2;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                      &.center {
+                          width: 40%;
+                      }  
+                    }
+           
+                   .td{
+             
+                      
+                        border-right: 1px solid #dee2e6;
+                     
+                       
+                   }
+                }
+               } 
+              }
+            }
+          }
+        }
+         &.projects-section {
+             .section {
+                 &__inner {
+                     padding-top: 60px;
+                     padding-bottom: 60px;
+
+
+                     .projects-list {
+                        .list-item {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 50px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            &__left {
+                               width: 50%;
+                               padding-right: 30px;
+                               .left-title {
+                                   font-size: 20px;
+                                   line-height: 28px;
+                                   @include firasans-bold;
+                                   color: #333333;
+                                   margin-bottom: 24px;
+                               }
+                               .left-info {
+                                   font-size: 16px;
+                                   line-height: 24px;
+                                   color: #333333;
+                                   margin-bottom: 32px;
+                                   @include firasans-normal;
+   
+                               }
+                               .left-link {
+                                   .article__link {
+                  
+                                       font-size: 16px;
+                                       line-height: 23px;
+                                       text-transform: uppercase;
+                                       display: flex;
+                                       align-items: center;
+                                       @include firasans-bold;
+                                       color: rgba(0, 56, 150, 0.5);
+                                       svg {
+                                         margin-left: 10px;
+                                       }
+                                       &:hover {
+                                         color: rgba(0, 56, 150, 0.7);
+                                       }
+                                   }
+                               }
+                            }
+                            &__right {
+                                width: 50%;
+                                img {
+                                    border-radius: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                 }
+                 &__title {
+                    font-size: 32px;
+                    line-height: 45px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    @include firasans-bold;
+                    color: #333333;
+                    margin-bottom: 40px;
+                 }
+               
+             }
+         }   
+      
+      }
+    }
+  }
+.section {
+    &.reference-section {
+        .section {
+            &__title {
+              font-size: 26px;
+              line-height: 36px;
+              color: #333333;
+              @include firasans-bold;
+              text-align: center;
+              margin-bottom: 32px;
+              text-transform: uppercase;
+            }
+            &__inner {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: rgba(12, 77, 162, 0.07);
+                    content: '';
+                    display: block;
+                    width: 100vw;
+                    height: 100%;
+                    z-index: -1;
+                }
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    background: rgba(12, 77, 162, 0.07);
+                    content: '';
+                    display: block;
+                    width: 100vw;
+                    height: 100%; 
+                    z-index: -1;
+                }
+            }
+            &__info {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    &.client-section {
+        .section {
+            &__title {
+                font-size: 26px;
+                line-height: 36px;
+                color: #333333;
+                @include firasans-bold;
+                text-align: center;
+                margin-bottom: 32px;
+                text-transform: uppercase;
+              }
+              &__inner {
+                  padding-top: 80px;
+                  padding-bottom: 30px;
+              }
+              &__info {
+                  display: flex;
+                  justify-content: center;
+                  
+              }
+        }
+    }
+}
