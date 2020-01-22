@@ -22,24 +22,49 @@
                &__info {
                    display: flex;
                    justify-content: space-between;
+                @include mobile {
+                  flex-direction: column-reverse;
+                }
                    &-left {
                     width: 60%;
                     padding-right: 30px;
+                    @include mobile {
+                      width: 100%;
+                      padding-right: 0;
+                    }
+                   
                     .text {
                         font-size: 16px;
                         line-height: 24px;
                         @include firasans-normal;
                         color: #333333;
                         padding-bottom: 30px;
+                        @include mobile {
+                          p {
+                            font-size: 14px;
+                            line-height: 21px;
+                          }
+                        }
                     }
                    }
                    &-right {
                        width: 40%;
                        display: flex;
-                  
-                       img {
+                       @include tablet {
+                         max-height: 263px;
+                       }
+                       @include mobile {
+                         width: 100%;
+                         padding-bottom: 20px;
+                       }
+                 img {
                            max-height: 263px;
                            max-width: 470px;
+                           @include tablet-and-phone {
+                             max-width: 100%;
+                            
+                           }
+                           
                        }
                    }
                }

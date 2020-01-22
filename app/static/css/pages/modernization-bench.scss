@@ -175,11 +175,17 @@
                                 color: #333333;
                                 text-transform: uppercase;
                                 margin-bottom: 80px;
-                               
+                               @include tablet {
+                                   margin-bottom: 40px;
+                               }
 
                             }
                             .bottom-block {
                                 display: flex;
+                                @include tablet {
+                                    flex-direction: column;
+                               
+                                }
                             }
                             .bottom-left {
                                 display: flex;
@@ -189,12 +195,21 @@
                                 padding-right: 30px;
                                 position: relative;
                                 top: -40px;
+                                @include tablet {
+                                    padding-right: 0;
+                                    top: 0;
+                                    margin-bottom: 16px;
+                                    width: 60%;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                }
                                 &__title {
                                     font-size: 20px;
                                     line-height: 28px;
                                     color: #333333;
                                     margin-bottom: 24px;
                                     @include firasans-bold;
+                                    
                                 }
                             }
                             .bottom-right {

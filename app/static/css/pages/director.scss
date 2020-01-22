@@ -55,6 +55,39 @@
                                 height: 566px;
                                 width: 100vw;
                                 left: 30%;
+                                @include tablet {
+                                    left: 0;
+                                }
+                            }
+                            &:after {
+                                display: none;
+                                @include tablet {
+                                    display: block;
+                                }
+                                top: -30px;                        
+                                content: '';
+                           
+                                background: rgba(12, 77, 162, 0.07);
+                                height: 566px;
+                                width: 100vw;
+                                right: 100%;
+                                position: absolute;
+                            }
+                        }
+                        &.left {
+                            &:after {
+                                display: none;
+                                @include tablet {
+                                    display: block;
+                                }
+                                top: -30px;                        
+                                content: '';
+                            
+                                background: rgba(12, 77, 162, 0.07);
+                                height: 566px;
+                                width: 100vw;
+                                left: 100%;
+                                position: absolute;
                             }
                         }
                         &:last-child {
@@ -70,7 +103,11 @@
                             height: 566px;
                             width: 100vw;
                             right: 30%;
+                            @include tablet {
+                                right: 0;
+                            }
                         }
+                       
                         .post-top {
                             &.right {
                              
@@ -80,6 +117,9 @@
                                 
                             }
                             width: 65%;
+                            @include tablet {
+                                width: 100%;
+                            }
                             &__title {
                                 font-size: 20px;
                                 line-height: 28px;

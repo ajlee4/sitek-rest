@@ -493,6 +493,10 @@
       &__inner {
         padding-top: 80px;
         padding-bottom: 80px;
+        @include mobile {
+          padding-top: 50px;
+          padding-bottom: 40px;
+        }
       }
       &__info {
         padding-bottom: 60px;
@@ -500,6 +504,9 @@
         &-bottom {
           display: flex;
          padding-top: 15px;
+         @include mobile {
+           flex-direction: column;
+         }
           .bottom {
             &-left {
               width: 35%;
@@ -507,11 +514,20 @@
               @include tablet {
                 width: 45%;
               }
+              @include mobile {
+                padding-right: 0;
+                width: 100%;
+                margin-bottom: 20px;
+              }
               p {
                 color: #222222;
                 font-size: 16px;
                 line-height: 24px;
                 @include firasans-normal;
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
               }
               &__link {
                 font-size: 16px;
@@ -538,7 +554,18 @@
               @include tablet {
                 width: 55%;
               }
-
+              @include mobile {
+                width: 100%;
+              
+              }
+              .col {
+                @include mobile {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-bottom: 15px;
+                }
+              }
               .sitekgram-link {
                 height: 194px;
                 width: 170px;
@@ -614,6 +641,10 @@
         margin-bottom: 16px;
         text-align: center;
         text-transform: uppercase;
+        @include mobile {
+          font-size: 28px;
+          line-height: 39px;
+        }
       }
       &__subtitle {
         font-size: 16px;
@@ -627,7 +658,10 @@
         @include mobile {
           padding-left: 0;
           padding-right: 0;
+          font-size: 14px;
+          line-height: 21px;
         }
+    
       }
       &__link {
         font-size: 16px;
@@ -871,6 +905,10 @@
                   @include firasans-bold;
                   text-transform: uppercase;
                   margin-bottom: 20px;
+                  @include mobile {
+                    font-size: 16px;
+                    line-height: 21px;
+                  }
                 }
 
                 &-text {
@@ -879,6 +917,10 @@
                   margin-bottom: 20px;
                   @include firasans-normal;
                   text-overflow: ellipsis;
+                  @include mobile {
+                    font-size: 14px;
+                    line-height: 21px;
+                  }
                 }
               }
 
@@ -931,7 +973,10 @@
           color: rgba(12, 77, 162, 0.6);
           display: flex;
           align-items: center;
-
+          @include mobile {
+            font-size: 14px;
+            line-height: 21px;
+          }
           &:hover {
             .arrow-down {
               background: rgba(12, 77, 162, 0.2);

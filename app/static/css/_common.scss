@@ -31,6 +31,8 @@ body {
   }
   &.header-menu-opened {
     overflow-y: hidden;
+    position: fixed;
+    width: 100%;
   }
 }
 
@@ -94,7 +96,7 @@ main {
     padding-top: 60px;
     position: relative;
     @include mobile {
-      padding-top: 0;
+     
     }
   }
   &__info {

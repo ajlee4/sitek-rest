@@ -5,10 +5,19 @@
           .section {
             &__title {
             }
+            &__slider {
+              @include tablet {
+                display: flex;
+                justify-content: center;
+              }
+            }
             &__inner {
               padding-top: 50px;
               padding-bottom: 20px;
               position: relative;
+              @include tablet {
+                padding-bottom: 0;
+              }
               .add-field {
                 font-size: 14px;
                 line-height: 21px;
@@ -30,6 +39,7 @@
                 padding-top: 80px;
                 padding-bottom: 40px;
                 position: relative;
+              
                 .add-field {
                     top: 45px;
                 }
@@ -185,10 +195,18 @@
           .section {
             &__inner {
               padding-top: 60px;
-            
+            @include tablet {
+              padding-top: 0;
+            }
             }
             &-block {
               margin-bottom: 60px;
+             &.slider {
+               @include tablet {
+                 display: flex;
+                 justify-content: center;
+               }
+             } 
               &__title {
                 font-size: 26px;
                 line-height: 36px;
@@ -199,6 +217,10 @@
                 padding-left: 100px;
                 padding-right: 100px;
                 text-transform: uppercase;
+                @include tablet {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
               }
               .advantages-list {
                 display: flex;
@@ -206,6 +228,9 @@
                 align-items: stretch;
                 margin-left: -10px;
                 margin-right: -10px;
+                @include tablet {
+                  flex-wrap: wrap;
+                }
                 .list-item {
                   padding-left: 10px;
                   padding-right: 10px;
@@ -214,7 +239,10 @@
                   line-height: 20px;
                   @include firasans-normal;
                   text-align: center;
-             
+                  @include tablet {
+                    width: 50%;
+                    margin-bottom: 15px;
+                  }
                   &__title {
                     color: #0C4DA2;
                     padding-bottom: 8px;
@@ -241,6 +269,10 @@
               &__slider {
                 padding-left: 50px;
                 padding-right: 50px;
+                @include tablet {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
                 .article__link {
                
                   font-size: 16px;
@@ -329,7 +361,10 @@
                  &__inner {
                      padding-top: 60px;
                      padding-bottom: 60px;
-
+                   @include tablet {
+                     padding-top: 0;
+                     padding-bottom: 20px;
+                   }
 
                      .projects-list {
                         .list-item {
@@ -404,6 +439,9 @@
   }
 .section {
     &.reference-section {
+      @include tablet {
+        margin-bottom: 30px;
+      }
         .section {
             &__title {
               font-size: 26px;

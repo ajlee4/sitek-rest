@@ -27,6 +27,9 @@
           &__inner {
             padding-top: 0;
             padding-bottom: 30px;
+            @include mobile {
+              padding-top: 50px;
+            }
           }
           &__info {
             @include firasans-normal;
@@ -375,8 +378,8 @@
   
                     .list-item {
                       @include tablet {
-                        padding-left: 25px;
-                        padding-right: 25px;
+                        padding-left: 16px;
+                        padding-right: 16px;
                       }
                       .count-field {
                         background-color: #0c4da2;

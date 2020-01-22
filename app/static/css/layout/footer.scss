@@ -11,6 +11,9 @@
     @include tablet {
       padding-top: 65px;
     }
+    @include mobile {
+      padding-top: 60px;
+    }
  
   }
   &__right {
@@ -32,12 +35,16 @@
       left: 0;
     .logo-big {
       display: none;
+     
     }
     .logo-md {
       position: absolute;
       top: 32px;
       left: 0;
       display: block;
+ @include mobile {
+   top: 10px;
+ }
     }
     }
  

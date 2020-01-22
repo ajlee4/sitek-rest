@@ -15,6 +15,10 @@
                       text-align: center;
                       @include firasans-bold;
                       margin-bottom: 50px;
+                      @include mobile {
+                          font-size: 32px;
+                          line-height: 42px;
+                      }
                     }
                     &__inner {
                           @include tablet {
@@ -39,6 +43,9 @@
                             @include tablet {
                                 display: none;
                             }
+                            @include mobile {
+                                display: none;
+                            }
                         &.tablet {
                             display: none;
                             @include tablet {
@@ -53,7 +60,8 @@
                     &__elem {
                         display: flex;
                         margin-bottom: 80px;
-                        @include tablet {
+                    
+                        @include tablet-and-phone {
                            flex-direction: column;
                            align-items: flex-end;
                            width: 80%;
@@ -62,12 +70,25 @@
                                flex-direction: column-reverse;
                            }
                         }
+                        @include mobile {
+                            flex-direction: column;
+                            width: 100%;
+                        }
                         .elem-card {
                             padding: 15px;
                             border-radius: 15px;
                             box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
                             display: flex;
+                            @include mobile {
+                                flex-direction: column;
+                               
+                            }
                             .card-img {
+                                @include mobile {
+                                    margin-bottom: 16px;
+                                    display: flex;
+                                  
+                                }
                                 img {
                                     border-radius: 15px;
                                     max-width: 160px;
@@ -76,6 +97,15 @@
                             }
                             .card-info {
                                 padding-left: 15px;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #333333;
+                                @include firasans-normal;
+                                @include mobile {
+                                    padding-left: 0;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                }
                             }
                         }
                         .years {
@@ -83,11 +113,12 @@
                             line-height: 210px;
                             color: rgba(12, 77, 162, 0.07);
                             @include firasans-bold;
-                            @include tablet {
+                            @include tablet-and-phone {
                                 font-size: 100px;
                                 line-height: 100px;
                                 padding-bottom: 20px;
                             }
+                            
                         }
                         .elem-left {
                             width: 50%;
@@ -96,6 +127,11 @@
                             justify-content: flex-end;
                             align-items: center;
                             @include tablet {
+                                width: 100%;
+                                padding-right: 0;
+                                justify-content: flex-start;
+                            }
+                            @include mobile {
                                 width: 100%;
                                 padding-right: 0;
                                 justify-content: flex-start;
@@ -111,6 +147,11 @@
                             width: 100%;
                             padding-left: 0;
                             justify-content: flex-start;
+                        }
+                        @include mobile {
+                            padding-left: 0;
+                            width: 100%;
+                        
                         }
                         }
                     }

@@ -24,7 +24,12 @@
               }
            
             }
-          
+          &__slider {
+            @include tablet {
+              display: flex;
+              justify-content: center;
+            }
+          }
             
             &__info {
                 padding-top: 80px;
@@ -197,6 +202,12 @@ flex-direction: row;
                     text-transform: uppercase;
                     margin-bottom: 40px;
                 }
+                &__slider {
+                  @include tablet {
+                    display: flex;
+                    justify-content: center;
+                  }
+                }
                 &__inner {
                     padding-top: 60px;
                     padding-bottom: 60px;
@@ -324,6 +335,9 @@ flex-direction: row;
             }
             &-block {
               margin-bottom: 60px;
+              @include tablet {
+                margin-bottom: 50px;
+              }
               &__title {
                 font-size: 26px;
                 line-height: 36px;
@@ -334,6 +348,12 @@ flex-direction: row;
                 padding-left: 100px;
                 padding-right: 100px;
                 text-transform: uppercase;
+                    @include tablet {
+                      padding-top: 15px;
+                      padding-left: 0;
+                      padding-right: 0;
+                    }
+
               }
               .advantages-list {
                 display: flex;
@@ -341,6 +361,9 @@ flex-direction: row;
                 align-items: stretch;
                 margin-left: -10px;
                 margin-right: -10px;
+                @include tablet {
+                  flex-wrap: wrap;
+                }
                 .list-item {
                   padding-left: 10px;
                   padding-right: 10px;
@@ -349,7 +372,10 @@ flex-direction: row;
                   line-height: 20px;
                   @include firasans-normal;
                   text-align: center;
-             
+                  @include tablet {
+                    width: 50%;
+                    margin-bottom: 15px;
+                  }
                   &__title {
                     color: #0C4DA2;
                     padding-bottom: 8px;
@@ -357,6 +383,7 @@ flex-direction: row;
                     border-bottom: 2px solid #0C4DA2;
                     margin-bottom: 24px;
                     min-height: 50px;
+                
                   }
                   &__info {
                     color: #333333;
@@ -376,6 +403,10 @@ flex-direction: row;
               &__slider {
                 padding-left: 50px;
                 padding-right: 50px;
+                @include tablet {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
                 .article__link {
                
                   font-size: 16px;

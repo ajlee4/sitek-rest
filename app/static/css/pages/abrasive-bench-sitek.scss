@@ -5,6 +5,12 @@
           .section {
             &__title {
             }
+            &__slider {
+              @include tablet {
+                display: flex;
+                justify-content: center;
+              }
+            }
             &__inner {
               padding-top: 50px;
               padding-bottom: 20px;
@@ -36,6 +42,9 @@
                 padding-top: 80px;
                 padding-bottom: 40px;
                 position: relative;
+                @include tablet {
+                  padding-bottom: 0;
+                }
                 .add-field {
                     top: 45px;
                 }
@@ -74,6 +83,9 @@
                 padding-bottom: 70px;
                 padding-top: 70px;
                 position: relative;
+                @include tablet {
+                  padding-top: 40px;
+                }
                 &:last-child {
                   padding-bottom: 0;
                 }
@@ -196,6 +208,9 @@
           .section {
             &__inner {
               padding-top: 60px;
+              @include tablet {
+                padding-top: 0;
+              }
             
             }
             &-block {
@@ -269,6 +284,11 @@
                      
                   }
               margin-bottom: 60px;
+              @include tablet {
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
               &__title {
                 font-size: 26px;
                 line-height: 36px;
@@ -279,6 +299,11 @@
                 padding-left: 100px;
                 padding-right: 100px;
                 text-transform: uppercase;
+                @include tablet {
+                  padding-left: 0;
+                  padding-right: 0;
+
+                }
               }
               .advantages-list {
                 display: flex;
@@ -541,6 +566,9 @@
               &__inner {
                   padding-top: 80px;
                   padding-bottom: 30px;
+                  @include tablet {
+                    padding-top: 0px;
+                  }
               }
               &__info {
                   display: flex;

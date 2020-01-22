@@ -2,7 +2,9 @@
   position: relative;
   max-width: 100%;
   padding-bottom: 30px;
-
+@include mobile {
+  padding-bottom: 0;
+}
   .slider-arrow {
     display: flex;
     .prev-arrow {
@@ -10,12 +12,18 @@
       position: absolute;
       top: 50%;
       margin-top: -20px;
+      @include mobile {
+        display: none !important;
+      }
     }
     .next-arrow {
       right: 42px;
       position: absolute;
       top: 50%;
       margin-top: -20px;
+      @include mobile {
+        display: none !important;
+      }
     }
     .prev-arrow,.next-arrow {
       cursor: pointer;
@@ -119,12 +127,13 @@
       overflow: hidden;
       text-overflow: ellipsis;
       @include mobile {
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 20px;
+        line-height: 26px;
         left: 20px;
-        bottom: 20px;
+        top: 24px;
+       
         max-width: 100%;
-        width: 80%;
+       width: 90%;
      
       }
       @include tablet {
@@ -469,6 +478,7 @@ padding-bottom: 40px;
 }
 .slick-dots {
   margin-top: 60px;
+
 }
   }
   position: relative;
@@ -486,7 +496,13 @@ padding-bottom: 40px;
    margin-left: -300px;
    text-align: center;
    width: 600px;
-
+@include tablet {
+  width: 500px;
+ margin-left: 0;
+ left: 30px;
+  font-size: 22px;
+  line-height: 34px;
+}
    z-index: 20;
  }
   .video {
@@ -519,7 +535,10 @@ padding-bottom: 40px;
   }
   @include mobile {
     margin-bottom: 0;
-    max-width: 100%;
+    max-width: 350px;
+  }
+  @include mobile-small {
+    max-width: 300px;
   }
   &.created {
     .slider-item {
@@ -565,7 +584,9 @@ padding-bottom: 40px;
       margin-top: -23px;
       right: 100%;
       margin-right: 17px;
-
+      @include tablet-and-phone {
+        display: none !important;
+      }
       &:before {
         transform: rotate(180deg);
       }
@@ -577,6 +598,9 @@ padding-bottom: 40px;
       margin-top: -23px;
       left: 100%;
       margin-left: 17px;
+      @include tablet-and-phone {
+        display: none !important;
+      }
     }
 
     &-dots {
@@ -618,6 +642,10 @@ padding-bottom: 40px;
     border-radius: 15px;
     padding: 20px;
     width: 380px;
+    @include tablet {
+     height: 250px;
+     width: 100%;
+    }
     &.created {
       .slider__item {
         opacity: 1;
@@ -663,7 +691,9 @@ padding-bottom: 40px;
         margin-top: -23px;
         right: 100%;
         margin-right: 35px;
-  
+        @include tablet-and-phone {
+          display: none !important;
+        }
         &:before {
           transform: rotate(180deg);
         }
@@ -675,6 +705,9 @@ padding-bottom: 40px;
         margin-top: -23px;
         left: 100%;
         margin-left: 35px;
+        @include tablet-and-phone {
+          display: none !important;
+        }
       }
   
       &-dots {
@@ -737,16 +770,31 @@ padding-bottom: 40px;
             @include firasans-normal;
             font-size: 16px;
             line-height: 24px;
+            @include mobile {
+              font-size: 14px;
+              line-height: 21px;
+            }
           }
           display: flex;
           justify-content: space-between;
+          @include mobile {
+            flex-direction: column;
+          }
           .bottom-left {
             width: 50%;
             padding-right: 30px;
+            @include mobile {
+              width: 100%;
+              padding-right: 0;
+              margin-bottom: 20px;
+
+            }
           }
           .bottom-right {
             width: 50%;
-
+            @include mobile {
+              width: 100%;
+            }
             .slider__item-img {
                 padding-left: 10px;
                 padding-right: 10px;
@@ -770,6 +818,9 @@ padding-bottom: 40px;
       width: 46px;
       border-radius: 50%;
       background: rgba(12, 77, 162, 0.07);
+      @include tablet {
+        display: none !important;
+      }
       @include mobile {
         display: none !important;
       }
@@ -925,7 +976,9 @@ padding-bottom: 40px;
       margin-top: -23px;
       right: 100%;
       margin-right: 35px;
-
+  @include tablet-and-phone {
+    display: none !important;
+  }
       &:before {
         transform: rotate(180deg);
       }
@@ -937,6 +990,9 @@ padding-bottom: 40px;
       margin-top: -23px;
       left: 100%;
       margin-left: 35px;
+      @include tablet-and-phone {
+        display: none !important;
+      }
     }
 
     &-dots {
@@ -996,20 +1052,35 @@ padding-bottom: 40px;
       }
       &-bottom {
         display: flex;
+        @include mobile {
+          flex-direction: column;
+        }
         .bottom-left {
           width: 50%;
           padding-right: 30px;
+          @include mobile {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 15px;
+          }
           p {
             font-size: 16px;
             line-height: 24px;
             color: #333333;
             @include firasans-normal;
+           @include mobile {
+             font-size: 14px;
+             line-height: 21px;
+           }
           }
         }
         .bottom-right {
           width: 50%;
           display: flex;
          justify-content: center;
+         @include mobile {
+           width: 100%;
+         }
         }
       }
     }
@@ -1044,7 +1115,9 @@ padding-bottom: 40px;
         margin-top: -23px;
         right: 100%;
         margin-right: 35px;
-  
+  @include tablet-and-phone {
+    display: none !important;
+  }
         &:before {
           transform: rotate(180deg);
         }
@@ -1056,6 +1129,9 @@ padding-bottom: 40px;
         margin-top: -23px;
         left: 100%;
         margin-left: 35px;
+        @include tablet-and-phone {
+          display: none !important;
+        }
       }
   
       &-dots {
@@ -1097,6 +1173,9 @@ padding-bottom: 40px;
   background-color: #fff;
   box-shadow: 0 0 6px rgba(12,77,162,.2);
 border-radius: 6px;
+@include tablet {
+  width: 100%;
+}
   .slider {
     &__item {
       display: flex;
@@ -1157,7 +1236,9 @@ border-radius: 6px;
       margin-top: -23px;
       right: 100%;
       margin-right: 35px;
-
+@include tablet-and-phone {
+  display: none !important;
+}
       &:before {
         transform: rotate(180deg);
       }
@@ -1169,6 +1250,9 @@ border-radius: 6px;
       margin-top: -23px;
       left: 100%;
       margin-left: 35px;
+      @include tablet-and-phone {
+        display: none !important;
+      }
     }
 
     &-dots {

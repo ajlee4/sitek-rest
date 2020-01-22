@@ -6,11 +6,19 @@
       &.primary-section {
         .section {
           &__title {
+            @include mobile {
+              font-size: 32px;
+              line-height: 42px;
+            }
           }
           &__inner {
             padding-top: 50px;
             padding-bottom: 20px;
             position: relative;
+            @include mobile {
+              padding-top: 80px;
+              max-width: 100%;
+            }
             .add-field {
               font-size: 14px;
               line-height: 21px;
@@ -19,6 +27,10 @@
               position: absolute;
               top: 0px;
               cursor: pointer;
+              @include mobile {
+                top: 45px;
+           
+              }
               @include firasans-normal;
               svg {
                 margin-right: 10px;
@@ -29,6 +41,16 @@
             padding-left: 50px;
             padding-right: 50px;
             padding-bottom: 60px;
+            @include tablet {
+              padding-bottom: 0;
+            }
+            @include mobile {
+              padding-left: 0;
+              padding-right: 0;
+              padding-bottom: 0;
+              display: flex;
+              justify-content: center;
+            }
           }
           &__info {
             .video-block {
@@ -77,6 +99,10 @@
                   color: #333333;
                   margin-bottom: 45px;
                   text-align: center;
+                  @include mobile {
+                    font-size: 28px;
+                    line-height: 39px;
+                  }
               }
               &__list {
                   display: flex;
@@ -91,6 +117,12 @@
                       padding-left: 10px;
                       padding-right: 10px;
                       margin-bottom: 20px;
+                      @include mobile {
+                        width: 100%;
+                        &:last-child {
+                          margin-bottom: 0;
+                        }
+                      }
 
                       &__left {
                           width: 40%;
@@ -100,6 +132,7 @@
                               justify-content: center;
                               align-items: center;
                               margin-bottom: 10px;
+                          
                            
                           }
                           .text {
@@ -115,6 +148,12 @@
                           @include firasans-normal;
                           font-size: 16px;
                           line-height: 24px;
+                          p {
+                            @include mobile {
+                              font-size: 14px;
+                              line-height: 21px;
+                            }
+                          }
 
                       }
                   }
@@ -129,6 +168,10 @@
             @include firasans-bold;
             text-align: center;
             margin-bottom: 40px;
+            @include mobile {
+              font-size: 28px;
+              line-height: 39px;
+            }
           }
           &__inner {
             padding-bottom: 60px;
@@ -144,6 +187,11 @@
             @include firasans-bold;
             text-align: center;
             margin-bottom: 40px;
+            @include mobile {
+              font-size: 28px;
+              line-height: 39px;
+              margin-bottom: 20px;
+            }
           }
           &__inner {
             padding-bottom: 60px;
@@ -153,7 +201,12 @@
             line-height: 22px;
             @include firasans-normal;
             color: #333333;
-
+            p {
+              @include mobile {
+                font-size: 14px;
+                line-height: 21px;
+              }
+            }
             &-list {
               .list-item {
                 margin-bottom: 16px;
@@ -179,20 +232,47 @@
             margin-bottom: 40px;
             @include firasans-bold;
             text-align: center;
+            @include mobile {
+              font-size: 28px;
+              line-height: 39px;
+            }
           }
           &__table {
             margin-bottom: 60px;
+        .table-wrapper {
+          box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
+          border-radius: 10px;
+          @include mobile {
+
+            overflow: hidden;
+            overflow-x: auto;
+          }
+        }
+          &.tablet {
+            @include tablet-and-phone{
+              padding-bottom: 170px;
+              position: relative;
+              margin-bottom: 0;
+            }
+            @include mobile {
+             
+              margin-bottom: 30px;
+            }
+          }
             .table {
               &.min {
                 width: 100%;
-                box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
-                border-radius: 10px;
+               
                 padding: 15px 10px;
                 position: relative;
 
                 z-index: 100;
-                background-color: #fff;
+              
                 position: relative;
+                @include mobile {
+                  width: 500px;
+                  
+                }
                 thead {
                   .title {
                     border-top-color: transparent;
@@ -243,8 +323,14 @@
               z-index: 100;
               background-color: #fff;
               overflow: hidden;
+              @include mobile {
+                overflow-x: auto;
+              }
               .table {
                 position: relative;
+                @include mobile {
+                  width: 800px;
+                }
                 thead {
                   .title {
                     border-top-color: transparent;
@@ -272,8 +358,12 @@
                 border-radius: 100%;
                 position: absolute;
                 bottom: -33px;
-                left: 50%;
-                margin-left: -33px;
+                right: 50%;
+                margin-right: -33px;
+                @include mobile {
+                  right: 0;
+                  margin-right: 0;
+                }
                 svg {
                   position: relative;
                   top: -12px;
@@ -284,14 +374,38 @@
               display: flex;
               justify-content: space-between;
               align-items: stretch;
+            @include mobile-small {
+              margin-bottom: 10px;
+            }
               .bottom-left {
                 width: 20%;
+                @include tablet-and-phone {
+                  width: 50%;
+                }
               }
               .bottom-center {
                 width: 60%;
+                @include tablet-and-phone{
+                  position: absolute;
+                  width: 100%;
+                  bottom: 0;
+                }
+                @include mobile {
+                  .table {
+                    width: 100%;
+                  }
+                  .table-wrapper {
+                    overflow: hidden;
+                  }
+                }
               }
               .bottom-right {
                 width: 20%;
+                @include tablet-and-phone{
+                  width: 50%;
+                  display: flex;
+                  justify-content: flex-end;
+                }
               }
             }
           }
@@ -318,6 +432,9 @@
               display: flex;
               justify-content: space-between;
               position: relative;
+              @include mobile {
+                flex-direction: column;
+              }
               &:before {
                 position: absolute;
                 top: 0;
@@ -327,10 +444,31 @@
                 display: block;
                 width: 100vw;
                 height: 100%;
+                @include mobile {
+                  right: 0;
+                }
+              }
+              &:after {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background: rgba(12, 77, 162, 0.07);
+                content: '';
+                display: block;
+                width: 100vw;
+                height: 100%;
+                display: none;
+                @include mobile {
+                  display: block;
+                }
               }
               .section__block-left {
                 width: 50%;
                 padding-right: 30px;
+                @include mobile {
+                  padding-right: 0;
+                  width: 100%;
+                }
 
                 .left-title {
                   font-size: 20px;
@@ -342,6 +480,10 @@
                   @include firasans-normal;
                   font-size: 16px;
                   line-height: 22px;
+                  @include mobile {
+                    font-size: 14px;
+                    line-height: 21px;
+                  }
                   .list-item {
                     margin-bottom: 16px;
                     display: flex;
@@ -360,7 +502,10 @@
                 align-items: flex-start;
                 width: 50%;
                 padding-left: 30px;
-
+                @include mobile {
+                  padding-left: 0;
+                  width: 100%;
+                }
                 .download-link {
                   font-size: 14px;
                   line-height: 21px;
@@ -369,7 +514,9 @@
                   display: flex;
                   align-items: center;
                   padding-left: 16px;
-
+                  @include mobile {
+                    padding-left: 0;
+                  }
                   svg {
                     padding: 10px;
                     width: 48px;
@@ -398,6 +545,10 @@
             font-size: 32px;
             line-height: 45px;
             margin-bottom: 40px;
+            @include mobile {
+              font-size: 28px;
+              line-height: 39px;
+            }
           }
           &__info {
             .button-wrap {
@@ -411,7 +562,13 @@
                 color: rgba(12, 77, 162, 0.6);
                 display: flex;
                 align-items: center;
-    
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
+              @include tablet {
+                margin-top: 0;
+              }
                 &:hover {
                   cursor: pointer;
                   .arrow-down {
@@ -440,6 +597,10 @@
                 margin-left: -10px;
                 margin-right: -10px;
                 display: flex;
+                @include tablet-and-phone{
+                  flex-wrap: wrap;
+                }
+                
               .list-item {
                 width: 25%;
                 display: flex;
@@ -447,6 +608,10 @@
                 align-items: center;
                 padding-left: 10px;
                 padding-right: 10px;
+                @include tablet-and-phone{
+                  width: 50%;
+                  margin-bottom: 15px;
+                }
                 &__img {
                   padding: 10px;
                   width: 180px;
@@ -458,6 +623,10 @@
                   box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
                   border-radius: 15px;
                   margin-bottom: 16px;
+                  @include tablet {
+                    width: 100%;
+                    overflow: hidden;
+                  }
                 }
                 &__info {
                   font-size: 20px;
@@ -479,6 +648,10 @@
                 @include firasans-bold;
                 text-align: center;
                 margin-bottom: 40px;
+                @include mobile {
+                  font-size: 28px;
+                  line-height: 39px;
+                }
 
               }
               &__inner {
@@ -494,7 +667,10 @@
                     color: rgba(12, 77, 162, 0.6);
                     display: flex;
                     align-items: center;
-        
+                    @include mobile {
+                      font-size: 14px;
+                      line-height: 21px;
+                    }
                     &:hover {
                       cursor: pointer;
                       .arrow-down {
@@ -525,7 +701,9 @@
             display: flex;
             margin-left: -10px;
             margin-right: -10px;
-
+            @include mobile {
+              flex-direction: column;
+            }
             .info-title {
               font-size: 20px;
               line-height: 28px;
@@ -556,6 +734,10 @@
                 width: 50%;
                 padding-left: 10px;
                 padding-right: 10px;
+                @include mobile {
+                  margin-bottom: 15px;
+                  width: 100%;
+                }
 
                
             }
@@ -563,10 +745,16 @@
                 width: 50%;
                 padding-left: 10px;
                 padding-right: 10px;
+                @include mobile {
+                  width: 100%;
+                }
             }
            }
                   &.description  {
                     margin-bottom: 40px;
+                    @include mobile {
+                      padding-top: 30px;
+                    }
                       .section__info {
                    
                         &-top {
@@ -576,16 +764,32 @@
                             margin-left: -10px;
                             margin-right: -10px;
                             margin-bottom: 40px;
-
+                          @include mobile {
+                            padding-top: 140px;
+                            position: relative;
+                          }
                             .top-left {
                                 width: 25%;
                                 padding-left: 10px;
                                 padding-right: 10px;
+                                @include mobile {
+                                  position: absolute;
+                                  top: 0;
+                                  left: 0;
+                                width: 50%;
+                              
+                                  img {
+                                    width: 100%;
+                                  }
+                                }
                             }
                             .top-center {
                                 width: 50%;
                                 padding-left: 10px;
                                 padding-right: 10px;
+                                @include mobile {
+                                  width: 100%;
+                                }
                                 .title {
                                     @include firasans-bold;
                                     font-size: 26px;
@@ -594,11 +798,18 @@
                                     margin-bottom: 24px;
                                     text-align: center;
                                     padding-top: 30px;
+                                    @include mobile-small {
+                                      padding-top: 0;
+                                    }
                                 }
                                 .text {
                                     @include firasans-normal;
                                     font-size: 16px;
                                     line-height: 24px;
+                                    @include mobile {
+                                      font-size: 14px;
+                                      line-height: 21px;
+                                    }
 
                                 }
                             }
@@ -606,23 +817,43 @@
                                 width: 25%;
                                 padding-left: 10px;
                                 padding-right: 10px;
+                                @include mobile {
+                                  position: absolute;
+                                  top: 0;
+                                  right: 0;
+                                width: 50%;
+                                 
+                                  img {
+                                    width: 100%;
+                                  }
+                                }
                             }
                         }
                         &-bottom {
                             display: flex;
                             margin-left: -10px;
                             margin-right: -10px;
-
+                            @include mobile {
+                              flex-direction: column;
+                            }
                            .bottom-left {
                                width: 25%;
                                padding-left: 10px;
                                padding-right: 10px;
+                               @include mobile {
+                                 width: 100%;
+                                
+                                 margin-bottom: 20px;
+                               }
                                .title {
                                    @include firasans-bold;
                                    font-size: 20px;
                                    line-height: 28px;
                                    text-transform: uppercase;
                                    text-align: center;
+                                   @include mobile {
+                                    text-align: left;
+                                   }
 
                                }
                            }
@@ -630,6 +861,9 @@
                             padding-left: 10px;
                             padding-right: 10px;
                                width: 50%;
+                               @include mobile {
+                                 width: 100%;
+                               }
                                .list {
                                    font-size: 16px;
                                    line-height: 24px;
@@ -661,6 +895,9 @@
                             display: flex;
                             margin-left: -10px;
                             margin-right: -10px;
+                            @include mobile {
+                              flex-direction: column;
+                            }
                 
                             .info-title {
                               font-size: 20px;
@@ -675,6 +912,10 @@
                                   line-height: 24px;
                                   color: #333333;
                                   @include firasans-normal;
+                                  @include mobile {
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                  }
                                   &__info {
                                       margin-bottom: 25px;
                                   }
@@ -692,6 +933,9 @@
                                 width: 50%;
                                 padding-left: 10px;
                                 padding-right: 10px;
+                                @include mobile {
+                                  width: 100%;
+                                }
                 
                                
                             }
@@ -699,6 +943,9 @@
                                 width: 50%;
                                 padding-left: 10px;
                                 padding-right: 10px;
+                                @include mobile {
+                                  width: 100%;
+                                }
                             }
                           }
                       }
@@ -719,6 +966,10 @@
                 font-size: 32px;
                 line-height: 45px;
                 margin-bottom: 40px;
+                @include mobile {
+                  font-size: 28px;
+                  line-height: 39px;
+                }
             }
             &__inner {
               &.padding {

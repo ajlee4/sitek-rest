@@ -37,9 +37,15 @@
               @include firasans-normal;
               width: 60%;
               padding-right: 30px;
+              @include tablet {
+                width: 70%;
+              }
             }
             &-right {
               width: 40%;
+              @include tablet {
+                width: 30%;
+              }
               .download-link {
                 font-size: 14px;
                 line-height: 21px;
@@ -75,6 +81,9 @@
                   right: 50%;
                   background-color: rgba(12, 77, 162, 0.07);
                   position: absolute;
+                  @include tablet {
+                    right: 30%;
+                  }
               }
                 .block-left {
                     width: 40%;
@@ -82,13 +91,21 @@
                     line-height: 24px;
                     @include firasans-normal;
                     padding-right: 30px;
+                    @include tablet {
+                      width: 60%;
+                    }
                 }
                 .block-right {
                     width: 60%;
-
+                    @include tablet {
+                      width: 40%;
+                    }
                     img {
                         max-width: 420px;
                         max-height: 240px;
+                        @include tablet {
+                          max-width: 100%;
+                        }
                     }
                     .download-link {
                         font-size: 14px;
@@ -101,6 +118,9 @@
                         position: absolute;
                         bottom: 0;
                         right: 15%;
+                        @include tablet {
+                          right: 0;
+                        }
       
                         svg {
                           padding: 10px;
@@ -123,6 +143,9 @@
           &__inner {
             padding-top: 60px;
             padding-bottom: 60px;
+            @include tablet {
+              padding-top: 0;
+            }
           }
           &__title {
             font-size: 32px;
@@ -339,9 +362,17 @@
           &__inner {
             padding-top: 60px;
             padding-bottom: 60px;
+            @include tablet {
+              padding-bottom: 0;
+            }
           }
           &__table {
             margin-bottom: 60px;
+            @include tablet {
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
             &-title,
             &-subtitle {
               text-align: center;
@@ -449,6 +480,9 @@
                   img {
                     max-width: 226px;
                     max-height: 128px;
+                    @include tablet {
+                      max-width: 100%;
+                    }
                   }
                   margin-bottom: 22px;
                 }

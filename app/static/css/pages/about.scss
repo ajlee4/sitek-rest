@@ -13,6 +13,9 @@
                     align-items: center;
                     padding-bottom: 90px;   
                     position: relative;
+                    @include mobile {
+                     padding-bottom: 40px;
+                    }
                     .download-link {
                         font-size: 14px;
                         line-height: 21px;
@@ -41,7 +44,10 @@
                 margin-top: 40px;
                 margin-bottom: 40px;
                 @include firasans-bold;
-              
+               @include mobile {
+                 font-size: 32px;
+                 line-height: 42px;
+               }
                 }
                 &__info {
                     display: flex;
@@ -77,17 +83,26 @@
                        line-height: 24px;
                        color: #333333;
                        @include firasans-normal;
+                       @include mobile {
+                        font-size: 14px;
+                        line-height: 21px;
+                      }
                    }
                 }
             }
         }
         &.primary-section {
+          @include tablet-and-phone {
+            padding-bottom: 0;
+          }
+          
             .section {
                 &__inner {
                     padding-top: 60px;
                     padding-bottom: 60px;
                     background: rgba(12, 77, 162, 0.07);
                     position: relative;
+              
                     &:before,&:after {
                       position: absolute;
                       top: 0;
@@ -121,6 +136,10 @@
                     line-height: 45px;
                     @include firasans-bold;
                     color: #333333;
+                    @include mobile {
+                      font-size: 28px;
+                      line-height: 39px;
+                    }
                 }
                 &__info {
                     p {
@@ -128,6 +147,10 @@
                         font-size: 16px;
                         line-height: 24px;
                         color: #333333;
+                        @include mobile {
+                          font-size: 14px;
+                          line-height: 21px;
+                        }
                     }
                 }
             }
@@ -140,6 +163,9 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                  @include mobile {
+                    padding-top: 30px;
+                  }
                 }
                 &__title {
  font-size: 26px;
@@ -147,6 +173,10 @@
  text-align: center;
  @include firasans-bold;
  margin-bottom: 32px;
+ @include mobile {
+   font-size: 24px;
+   line-height: 31px;
+ }
                 }
                 &__info {
                  p {
@@ -154,6 +184,10 @@
                     font-size: 16px;
                     line-height: 24px;
                     color: #333333;
+                    @include mobile {
+                      font-size: 14px;
+                      line-height: 21px;
+                    }
                  }
                  margin-bottom: 20px;
                 }
@@ -167,6 +201,10 @@
                 text-transform: uppercase;
                 font-size: 42px;
                 line-height: 55px;
+                @include mobile {
+                  font-size: 28px;
+                  line-height: 39px;
+                }
               }
               &__top {
                 box-shadow: none;
@@ -185,6 +223,10 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
               }
             }
             .sitekgram {
@@ -193,10 +235,16 @@
                 padding: 40px;
                 border-radius: 15px;
                 overflow: hidden;
-             
+             @include mobile {
+               padding-left: 20px;
+               padding-right: 20px;
+             }
                 display: block;
                 &-bottom {
                     display: flex;
+                    @include mobile {
+                      flex-direction: column;
+                    }
                 }
            
                 .filter-subfield__list {
@@ -204,6 +252,21 @@
                     justify-content: space-between;
                    padding-top: 35px;
                     padding-bottom: 35px;
+                    @include mobile {
+                      flex-direction: column;
+                    }
+                    .list-item {
+                      @include mobile {
+                        margin-bottom: 22px;
+                       
+                          font-size: 14px;
+                          line-height: 21px;
+                        
+                        &:last-child {
+                          margin-bottom: 0;
+                        }
+                      }
+                    }
                 }
                 .section__link {
                     position: absolute;
@@ -249,6 +312,7 @@
                       }
                       .list-item {
                         width: 50%;
+                        
                         @include tablet-and-phone {
                           width: 100%;
                         }
@@ -383,15 +447,27 @@
                 }
                 &__bottom {
                     display: flex;
+                    @include mobile {
+                      flex-direction: column;
+
+                    }
                     .section {
                         &__right {
                              width: 50%;
                              padding-left: 20px;
+                             @include mobile {
+                               width: 100%;
+                               padding-left: 0;
+                             }
                           p {
                               font-size: 16px;
                               line-height: 24px;
                               @include firasans-normal;
                               color: #222222;
+                              @include mobile {
+                                font-size: 14px;
+                                line-height: 21px;
+                              }
                           }
                           .section__right-link {
                               font-size: 16px;
@@ -409,6 +485,12 @@
                         }
                         &__left {
                             width: 50%;
+                            @include mobile {
+                              width: 100%;
+                              margin-bottom: 20px;
+                              display: flex;
+                              justify-content: center;
+                            }
                             img {
                                 border-radius: 15px;
                             }

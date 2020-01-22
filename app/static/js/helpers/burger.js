@@ -3,7 +3,9 @@
 $('#header-tablet-menu').on('click', function (e) {
   e.preventDefault();
   $(this).toggleClass('burger-close');
-  $('.header__tablet-nav').toggleClass('open');
+ $('.header').toggleClass('open')
+ $('.header__tablet-nav').slideToggle()
+  $('body').toggleClass('header-menu-opened');
  
 });
 

@@ -16,6 +16,15 @@
                         color: #333333;
                         margin-bottom: 40px;
                         text-align: center;
+                        @include mobile {
+                            font-size: 32px;
+                            line-height: 42px;
+                        }
+                    }
+                    &__inner {
+                        @include mobile {
+                            padding-top: 30px;
+                        }
                     }
                     &__info {
                      
@@ -27,6 +36,13 @@
                     @include firasans-normal;
                     font-size: 16px;
                     line-height: 24px;
+                    @include mobile {
+                        width: 100%;
+                        p {
+                            font-size: 14px;
+                            line-height: 21px;
+                        }
+                    }
                   }
                     }
                     &__post {
@@ -46,6 +62,41 @@
                                 height: 566px;
                                 width: 100vw;
                                 left: 30%;
+                              @include tablet-and-phone {
+                                  right: 100%;
+                                  left: 0;
+                              }
+                            }
+                            
+                            &:after {
+                                display: none;
+                                @include tablet-and-phone {
+                                    display: block;
+                                }
+                                top: -30px;                        
+                                content: '';
+                             
+                                background: rgba(12, 77, 162, 0.07);
+                                height: 566px;
+                                width: 100vw;
+                                right: 100%;
+                                position: absolute;
+                            }
+                        }
+                        &.left {
+                            &:after {
+                                display: none;
+                                @include tablet-and-phone {
+                                    display: block;
+                                }
+                                top: -30px;                        
+                                content: '';
+                             
+                                background: rgba(12, 77, 162, 0.07);
+                                height: 566px;
+                                width: 100vw;
+                                left: 100%;
+                                position: absolute;
                             }
                         }
                         &:last-child {
@@ -53,24 +104,32 @@
                         }
                         &:before {
                             position: absolute;
-                            top: -30px;
-                          
+                            top: -30px;                        
                             content: '';
                             display: block;
                             background: rgba(12, 77, 162, 0.07);
                             height: 566px;
                             width: 100vw;
                             right: 30%;
+                       @include tablet-and-phone {
+                            right: 0%;
+                       }
                         }
+                     
+                  
+                      
                         .post-top {
                             &.right {
-                             
+                              
                              display: flex;
                              flex-direction: column;
                              align-items: flex-end;
                                 
                             }
                             width: 65%;
+                            @include tablet-and-phone {
+                                width: 100%;
+                            }
                             &__title {
                                 font-size: 20px;
                                 line-height: 28px;
@@ -79,6 +138,10 @@
                                 color: #333333;
                                 display: flex;
                                 align-items: center;
+                                @include mobile {
+                                    font-size: 18px;
+                                    line-height: 25px;
+                                }
                                 svg {
                                     margin-left: 15px;
                                 }
@@ -89,6 +152,12 @@
                                 @include firasans-normal;
                                 color: #333333;
                                 margin-bottom: 24px;
+                                @include mobile {
+                                    p {
+                                        font-size: 14px;
+                                        line-height: 21px;
+                                    }
+                                }
                             }
                         }
                         .post-bottom {
@@ -138,6 +207,13 @@
                                 &.small {
                                     width: 234px;
                                     height: 234px;
+
+                                    @include tablet-and-phone{
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                      
+                                    
                                 }
                                    
                                 &.video {

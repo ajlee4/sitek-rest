@@ -15,18 +15,32 @@
                   color: #333333;
                   margin-bottom: 40px;
                   text-align: center;
+                  @include mobile {
+                      font-size: 32px;
+                      line-height: 42px;
+                  }
                 }
                &__inner {
-              
+
                } 
                &__info {
                    padding-bottom: 50px;
+                   @include mobile {
+                       padding-top: 30px;
+                   }
                    .article {
                        display: flex;
                        justify-content: space-between;
+                       @include mobile {
+                           flex-direction: column;
+                       }
                        &__left {
                            width: 70%;
                            padding-left: 30px;
+                        @include mobile {
+                            width: 100%;
+                            padding-left: 0;
+                        }   
                            .article {
                                &__title {
                                 font-size: 26px;
@@ -34,6 +48,10 @@
                                 color: #333333;
                                 margin-bottom: 24px;
                                 @include firasans-bold;
+                            @include mobile {
+                                font-size: 20px;
+                                line-height: 28px;
+                            }
                                }
                                &__text {
                                 margin-bottom: 24px;
@@ -42,6 +60,10 @@
                                     line-height: 24px;
                                     color: #333333;
                                     @include firasans-normal;
+                                    @include mobile {
+                                        font-size: 14px;
+                                        line-height: 21px;
+                                    }
                                 }
                                }
                                &__link {
@@ -62,6 +84,11 @@
                            }
                        }
                        &__right {
+                           @include mobile {
+                               padding-top: 32px;
+                               display: flex;
+                               justify-content: center;
+                           }
                            .article__link {
                                display: inline-block;
                             .sitekgram-link {
@@ -165,6 +192,15 @@
                     &__inner {
                         padding-bottom: 80px;
                         position: relative;
+                        &:after {
+                            display: none;
+                        }
+                        &:before {
+                            display: none;
+                        }
+                        @include mobile {
+                            padding-top: 0;
+                        }
                         .add-field {
                             font-size: 14px;
                             line-height: 21px;
@@ -173,7 +209,14 @@
                            position: absolute;
                            top: 0px;
                            right: 0px;
-                        
+                        @include tablet {
+                            left: 0;
+                            top: 90px;
+                        }
+                        @include mobile {
+                        left: 0;
+                        top: 90px;
+                        }
                            cursor: pointer;
                             @include firasans-normal;
                             svg {
@@ -190,19 +233,41 @@
                         @include firasans-bold;
                         margin-bottom: 50px;
                     }
+                    
                     &__info {
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: 60px;
+                        @include mobile {
+                            flex-direction: column;
+
+                        }
+                        @include tablet {
+                            flex-direction: column;
+                        }
                         &-left {
                             width: 30%;
                             padding-right: 30px;
+                            @include tablet {
+                                padding-right: 0;
+                                width: 100%;
+                                margin-bottom: 40px;
+                            }
+                            @include mobile {
+                                padding-right: 0;
+                                width: 100%;
+                                margin-bottom: 40px;
+                            }
                             .title {
                                 font-size: 18px;
                                 line-height: 18px;
                                 @include firasans-bold;
                                 color: #333333;
                                 margin-bottom: 40px;
+                              
+                                @include mobile {
+                                    
+                                }
                             }
                             .logo {
                                 margin-bottom: 40px;
@@ -211,11 +276,22 @@
                                 font-size: 16px;
                                 line-height: 24px;
                                 @include firasans-normal;
+                             p {
+                                @include mobile {
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                }
+                             }
                             }
                         }
                         &-right {
                             width: 60%;
-                          
+                            @include tablet {
+                                width: 100%;
+                            }
+                            @include mobile {
+                                width: 100%;
+                            }
                             .section__info-table {
                                 width: 100%;
                                 box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
@@ -224,8 +300,15 @@
                                 position: relative;
                                 z-index: 100;
                                 background-color: #fff;
+                                @include mobile {
+                                    overflow-x: auto;
+                                    
+                                }
                                .table {
-                                
+                                @include mobile {
+                                    width: 500px;
+                              
+                                }
                                 .title {
                                     border-top: none;
                                     border-bottom: none;
@@ -273,6 +356,7 @@
                         padding-top: 50px;
                         padding-bottom: 5px;
                         position: relative;
+
                         &:before {
                             position: absolute;
                             top: 0;
@@ -282,6 +366,10 @@
                             background: rgba(12, 77, 162, 0.07);
                             content: '';
                             z-index: -1;
+                            @include tablet-and-phone {
+                                width: 100vw;
+                            }
+
                         }
                         &:after {
                             position: absolute;
@@ -307,6 +395,11 @@
                         @include firasans-bold;
                         margin-bottom: 60px;
                         text-align: center;
+                        text-transform: uppercase;
+                        @include mobile {
+                            font-size: 24px;
+                            line-height: 31px;
+                        }
                     }
                     &__table {
                         width: 100%;
@@ -316,8 +409,14 @@
                         position: relative;
                         z-index: 100;
                         background-color: #fff;
+                        @include mobile {
+                         overflow-x: auto;                     
+                        }
                        .table {
-                        
+                        @include mobile {
+                            width: 500px;
+                      
+                        }
                         .title {
                             border-top: none;
                             border-bottom: none;
@@ -362,6 +461,10 @@
                     &__info {
                         padding-left: 100px;
                         padding-right: 100px;
+                        @include tablet-and-phone{
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
                     }
                     &__inner {
                         padding-bottom: 80px;
@@ -374,7 +477,14 @@
                            position: absolute;
                            top: 0px;
                            right: 0px;
-                        
+                        @include tablet {
+                            left: 0;
+                            top: 50px;
+                        }
+                        @include mobile {
+                            left: 0;
+                            top: 70px;
+                        }
                         
                            cursor: pointer;
                             @include firasans-normal;
@@ -432,28 +542,46 @@
                           justify-content: space-between;
                           margin-left: -10px;
                           margin-right: -10px;
+                          @include tablet-and-phone {
+                              flex-wrap: wrap;
+                              padding-left:0px; 
+                              padding-right:0px;
+                          }
+                          
                         .list-item {
                             padding-left: 10px;
                             padding-right: 10px;
+                            width: 33.3333%;
+                            @include tablet {
+                                width: 50%;
+                                margin-bottom: 20px;
+                            }
+                            @include mobile {
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
                         }
                         .list-link {
-                            width: 300px;
+                          
                             height: 350px;
                             display: block;
                             box-shadow: 0px 0px 18px rgba(171, 171, 175, 0.45);
                             border-radius: 15px;
                             overflow: hidden;
                             position: relative;
-                        
+                       
                             &__text {
                                 background-color: #fff;
                                 height: 40%;
-                                font-size: 18px;
-                                line-height: 23px;
+                              
                                 @include firasans-bold;
                                 color: #333333;
                                 text-transform: uppercase;
                                 padding: 25px 25px 25px 65px;
+                                p {
+                                    font-size: 18px;
+                                    line-height: 23px;
+                                }
                             }
                             &__img {
                                 display: flex;
@@ -490,16 +618,32 @@
                       padding-bottom: 80px;
                       display: flex;
                       justify-content: space-between;
+                      @include tablet {
+                          padding-bottom: 0px;
+                      }
+                      @include mobile {
+                          flex-direction: column;
+                          padding-bottom: 30px;
+                      }
                   }
                   &__left {
                       width: 50%;
                       padding-right: 30px;
+                      @include mobile {
+                          padding-right: 0;
+                          width: 100%;
+                          padding-bottom: 40px;
+                      }
                       &-title {
                           @include firasans-bold;
                           font-size: 26px;
                           line-height: 36px;
                           color: #333333;
                           margin-bottom: 25px;
+                          @include mobile {
+                              font-size: 24px;
+                              line-height: 31px;
+                          }
                       }
                       &-text {
                         font-size: 16px;
@@ -507,6 +651,12 @@
                         color: #333333;
                         @include firasans-normal;
                         margin-bottom: 25px;
+                        p {
+                            @include mobile {
+                                font-size: 14px;
+                                line-height: 21px;
+                            }
+                        }
                       }
                       &-link {
                         font-size: 16px;
@@ -528,6 +678,10 @@
                       width: 50%;
                       display: flex;
                       justify-content: center;
+                      @include mobile {
+                          width: 100%;
+                         
+                      }
                   }
               }
           }
@@ -544,6 +698,10 @@
             @include firasans-bold;
             text-align: center;
             margin-bottom: 32px;
+            @include mobile {
+                font-size: 24px;
+                line-height: 31px;
+            }
         }
         &__info {
             font-size: 16px;
@@ -552,6 +710,16 @@
             @include firasans-normal;
             padding-left: 100px;
             padding-right: 100px;
+            @include tablet-and-phone{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            p {
+                @include mobile {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
         }
         &__inner {
             padding-bottom: 80px;
