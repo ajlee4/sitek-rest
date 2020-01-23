@@ -283,6 +283,9 @@
         max-width: 100%;
         margin-bottom: 60px;
       }
+    @include mobile {
+      width: 300px;
+    }
 
       &-item {
         @include tablet-and-phone {
@@ -294,6 +297,9 @@
         &__inner {
           @include tablet-and-phone {
             margin: 0;
+          }
+          @include mobile {
+            max-width: 100%;
           }
         }
 
@@ -496,6 +502,13 @@ padding-bottom: 40px;
    margin-left: -300px;
    text-align: center;
    width: 600px;
+   @include mobile {
+    margin-left: 0;
+     margin-left: -150px;
+     font-size: 14px;
+     line-height: 18px;
+     width: 300px;
+   }
 @include tablet {
   width: 500px;
  margin-left: 0;
@@ -527,6 +540,11 @@ padding-bottom: 40px;
         left: 50%;
         margin-top: -37px;
         margin-left: -37px;
+        @include mobile {
+         @include sprite('play-mini');
+         margin-left: -22px;
+         margin-right: -22px;
+        }
     }
 }
   @include tablet {
@@ -1173,34 +1191,56 @@ padding-bottom: 40px;
   background-color: #fff;
   box-shadow: 0 0 6px rgba(12,77,162,.2);
 border-radius: 6px;
-@include tablet {
+@include tablet-and-phone {
   width: 100%;
+}
+@include mobile {
+  padding: 15px;
 }
   .slider {
     &__item {
       display: flex;
       justify-content: space-between;
+      @include mobile {
+        flex-direction: column;
+      }
       &-left {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 30%;
+        @include mobile {
+          width: 100%;
+          margin-bottom: 20px;
+        }
       }
       &-right {
         width: 70%;
         padding-left: 30px;
+        @include mobile {
+          width: 100%;
+          padding-left: 0;
+        }
         .item-title{
           font-size: 18px;
           line-height: 18px;
           @include firasans-bold;
           margin-bottom: 24px;
-
+          @include mobile {
+            line-height: 25px;
+            margin-bottom: 15px;
+          }
         }
         .item-info {
           font-size: 16px;
           line-height: 24px;
           @include firasans-normal;
-
+        
+           @include mobile {
+            font-size: 14px;
+            line-height: 21px;
+           }
+         
         }
       }
     }
@@ -1261,7 +1301,9 @@ border-radius: 6px;
       justify-content: center;
       position: absolute;
       margin-top: 60px;
-      margin-left: -32px;
+  @include mobile {
+    margin-top: 40px;
+  }
 
       li {
         width: 10px;

@@ -16,19 +16,33 @@
                         color: #333333;
                         margin-bottom: 40px;
                         text-align: center;
+                        @include mobile {
+                            font-size: 32px;
+                            line-height: 42px;
+                        }
                     }
                     &__info {
                         display: flex;
                         justify-content: space-between;
                         align-items: flex-start;
                         padding-bottom: 80px;
+                        @include mobile {
+                            flex-direction: column-reverse;
+                        }
                         .info-left {
                             width: 50%;
+                            @include mobile {
+                                width: 100%;
+                            }
                             p {
                                 font-size: 16px;
                                 line-height: 24px;
                                 color: #333333;
                                 @include firasans-normal;
+                                @include mobile {
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                }
                             }
                         }
                         .info-right {
@@ -36,6 +50,12 @@
                             top: -10px;
                             width: 50%;
                             padding-left: 20px;
+                            @include mobile {
+                                padding-left: 0;
+                                top: 0;
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
                         }
                     }
                     &__post {
@@ -55,13 +75,13 @@
                                 height: 566px;
                                 width: 100vw;
                                 left: 30%;
-                                @include tablet {
+                                @include tablet-and-phone {
                                     left: 0;
                                 }
                             }
                             &:after {
                                 display: none;
-                                @include tablet {
+                                @include tablet-and-phone {
                                     display: block;
                                 }
                                 top: -30px;                        
@@ -77,7 +97,7 @@
                         &.left {
                             &:after {
                                 display: none;
-                                @include tablet {
+                                @include tablet-and-phone {
                                     display: block;
                                 }
                                 top: -30px;                        
@@ -103,7 +123,7 @@
                             height: 566px;
                             width: 100vw;
                             right: 30%;
-                            @include tablet {
+                            @include tablet-and-phone {
                                 right: 0;
                             }
                         }
@@ -118,6 +138,9 @@
                             }
                             width: 65%;
                             @include tablet {
+                                width: 100%;
+                            }
+                            @include mobile {
                                 width: 100%;
                             }
                             &__title {
@@ -187,6 +210,9 @@
                                 &.small {
                                     width: 234px;
                                     height: 234px;
+                                    @include mobile {
+                                        height: auto;
+                                    }
                                 }
                                    
                                 &.video {

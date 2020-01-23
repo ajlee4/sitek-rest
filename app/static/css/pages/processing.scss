@@ -62,12 +62,10 @@
                                 height: 566px;
                                 width: 100vw;
                                 left: 30%;
-                              @include tablet-and-phone {
-                                  right: 100%;
-                                  left: 0;
-                              }
+                                @include tablet-and-phone {
+                                    left: 0;
+                                }
                             }
-                            
                             &:after {
                                 display: none;
                                 @include tablet-and-phone {
@@ -75,7 +73,7 @@
                                 }
                                 top: -30px;                        
                                 content: '';
-                             
+                           
                                 background: rgba(12, 77, 162, 0.07);
                                 height: 566px;
                                 width: 100vw;
@@ -91,7 +89,7 @@
                                 }
                                 top: -30px;                        
                                 content: '';
-                             
+                            
                                 background: rgba(12, 77, 162, 0.07);
                                 height: 566px;
                                 width: 100vw;
@@ -104,30 +102,32 @@
                         }
                         &:before {
                             position: absolute;
-                            top: -30px;                        
+                            top: -30px;
+                          
                             content: '';
                             display: block;
                             background: rgba(12, 77, 162, 0.07);
                             height: 566px;
                             width: 100vw;
                             right: 30%;
-                       @include tablet-and-phone {
-                            right: 0%;
-                       }
+                            @include tablet-and-phone {
+                                right: 0;
+                            }
                         }
-                     
-                  
-                      
+                       
                         .post-top {
                             &.right {
-                              
+                             
                              display: flex;
                              flex-direction: column;
                              align-items: flex-end;
                                 
                             }
                             width: 65%;
-                            @include tablet-and-phone {
+                            @include tablet {
+                                width: 100%;
+                            }
+                            @include mobile {
                                 width: 100%;
                             }
                             &__title {
@@ -138,10 +138,6 @@
                                 color: #333333;
                                 display: flex;
                                 align-items: center;
-                                @include mobile {
-                                    font-size: 18px;
-                                    line-height: 25px;
-                                }
                                 svg {
                                     margin-left: 15px;
                                 }
@@ -152,12 +148,6 @@
                                 @include firasans-normal;
                                 color: #333333;
                                 margin-bottom: 24px;
-                                @include mobile {
-                                    p {
-                                        font-size: 14px;
-                                        line-height: 21px;
-                                    }
-                                }
                             }
                         }
                         .post-bottom {
@@ -207,13 +197,9 @@
                                 &.small {
                                     width: 234px;
                                     height: 234px;
-
-                                    @include tablet-and-phone{
-                                        width: 100%;
-                                        height: 100%;
+                                    @include mobile {
+                                        height: auto;
                                     }
-                                      
-                                    
                                 }
                                    
                                 &.video {

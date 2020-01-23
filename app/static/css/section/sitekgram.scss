@@ -28,8 +28,9 @@
             padding-top: 0;
             padding-bottom: 30px;
             @include mobile {
-              padding-top: 50px;
+              padding-top: 0px;
             }
+          
           }
           &__info {
             @include firasans-normal;

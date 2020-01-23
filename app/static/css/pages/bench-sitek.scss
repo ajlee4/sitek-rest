@@ -4,11 +4,19 @@
       &.primary-section {
         .section {
           &__title {
+            @include mobile {
+              font-size: 32px;
+              line-height: 42px;
+            }
           }
           &__inner {
             padding-top: 50px;
             padding-bottom: 20px;
             position: relative;
+            @include mobile {
+              max-width: 100%;
+              padding-top: 80px;
+            }
             .add-field {
               font-size: 14px;
               line-height: 21px;
@@ -18,6 +26,9 @@
               top: 0px;
               cursor: pointer;
               @include firasans-normal;
+              @include mobile {
+                top: 50px;
+              }
               svg {
                 margin-right: 10px;
               }
@@ -27,9 +38,18 @@
             padding-left: 50px;
             padding-right: 50px;
             padding-bottom: 60px;
+            @include mobile {
+              padding-left: 0;
+              padding-right: 0;
+              display: flex;
+              justify-content: center;
+            }
           }
           &__info {
             display: flex;
+            @include mobile {
+              flex-direction: column;
+            }
             &-left {
               font-size: 16px;
               line-height: 24px;
@@ -37,6 +57,17 @@
               @include firasans-normal;
               width: 60%;
               padding-right: 30px;
+              @include mobile {
+                padding-right: 0;
+                width: 100%;
+                margin-bottom: 24px;
+              }
+              p {
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
+              }
               @include tablet {
                 width: 70%;
               }
@@ -46,6 +77,9 @@
               @include tablet {
                 width: 30%;
               }
+              @include mobile {
+                width: 100%;
+              }
               .download-link {
                 font-size: 14px;
                 line-height: 21px;
@@ -54,7 +88,9 @@
                 display: flex;
                 align-items: center;
                 padding-left: 16px;
-
+                @include mobile {
+                  padding-left: 0;
+                }
                 svg {
                   padding: 10px;
                   width: 48px;
@@ -72,6 +108,9 @@
               padding-top: 50px;
               padding-bottom: 50px;
               position: relative;
+              @include mobile {
+                flex-direction: column;
+              }
               &:before {
                   content: '';
                   display: block;
@@ -84,7 +123,26 @@
                   @include tablet {
                     right: 30%;
                   }
+                  @include mobile {
+                    right: 0;
+                  }
               }
+
+              &:after {
+                content: '';
+                display: block;
+                width: 100vw;
+                height: 100%;
+                top: 0;
+                left: 100%;
+                background-color: rgba(12, 77, 162, 0.07);
+                position: absolute;
+                display: none;
+              
+                @include mobile {
+                 display: block;
+                }
+            }
                 .block-left {
                     width: 40%;
                     font-size: 16px;
@@ -94,15 +152,31 @@
                     @include tablet {
                       width: 60%;
                     }
+                    @include mobile {
+                      width: 100%;
+                      margin-bottom: 20px;
+                      p {
+                        font-size: 14px;
+                        line-height: 21px;
+                      }
+                    }
                 }
                 .block-right {
                     width: 60%;
+                    @include mobile {
+                      width: 100%;
+                    
+                    }
                     @include tablet {
                       width: 40%;
                     }
                     img {
                         max-width: 420px;
                         max-height: 240px;
+                        @include mobile {
+                          max-width: 100%;
+                          margin-bottom: 20px;
+                        }
                         @include tablet {
                           max-width: 100%;
                         }
@@ -120,6 +194,10 @@
                         right: 15%;
                         @include tablet {
                           right: 0;
+                        }
+                        @include mobile {
+                          position: static;
+                          padding-left: 0;
                         }
       
                         svg {
@@ -143,9 +221,10 @@
           &__inner {
             padding-top: 60px;
             padding-bottom: 60px;
-            @include tablet {
+            @include tablet-and-phone {
               padding-top: 0;
             }
+
           }
           &__title {
             font-size: 32px;
@@ -154,6 +233,10 @@
             @include firasans-bold;
             margin-bottom: 40px;
             text-align: center;
+            @include mobile {
+              font-size: 28px;
+              line-height: 39px;
+            }
           }
           &__table {
             width: 100%;
@@ -165,11 +248,17 @@
             z-index: 100;
             background-color: #fff;
             overflow: hidden;
+            @include mobile {
+              overflow-x: auto;
+            }
             .table {
               font-size: 14px;
               line-height: 21px;
               color: #333333;
               position: relative;
+              @include mobile {
+                width: 800px;
+              }
               thead {
                 th {
                   border-top: none;
@@ -214,6 +303,10 @@
             @include firasans-bold;
             margin-bottom: 40px;
             text-align: center;
+            @include mobile {
+              font-size: 28px;
+              line-height: 39px;
+            }
           }
           &__inner {
             padding-top: 60px;
@@ -256,7 +349,10 @@
               color: rgba(12, 77, 162, 0.6);
               display: flex;
               align-items: center;
-
+              @include mobile {
+                font-size: 14px;
+                line-height: 21px;
+              }
               &:hover {
                 cursor: pointer;
                 .arrow-down {
@@ -288,11 +384,17 @@
               justify-content: space-between;
               margin-left: -10px;
               margin-right: -10px;
+              @include mobile {
+                flex-wrap: wrap;
+              }
               .list-item {
                 width: 33.33333%;
                 margin-bottom: 20px;
                 padding-left: 10px;
                 padding-right: 10px;
+                @include mobile {
+                  width: 100%;
+                }
                 &__top {
                   display: block;
                   position: relative;
@@ -365,6 +467,9 @@
             @include tablet {
               padding-bottom: 0;
             }
+            @include mobile {
+              padding-bottom: 0;
+            }
           }
           &__table {
             margin-bottom: 60px;
@@ -398,8 +503,14 @@
               z-index: 100;
               background-color: #fff;
               overflow: hidden;
+              @include mobile {
+                overflow-x: auto;
+              }
               .table {
                 position: relative;
+                @include mobile {
+                  width: 800px;
+                }
                 thead {
                   th {
                     border-top: none;
@@ -429,8 +540,12 @@
                 border-radius: 100%;
                 position: absolute;
                 bottom: -33px;
-                left: 50%;
-                margin-left: -33px;
+                right: 50%;
+                margin-right: -33px;
+                @include mobile {
+                  margin-right: 0;
+                  right: 0;
+                }
                 svg {
                   position: relative;
                   top: -12px;
@@ -449,6 +564,12 @@
               box-shadow: 0 0 18px rgba(171, 171, 175, 0.45);
               padding: 25px 20px;
               padding-bottom: 50px;
+              @include mobile {
+                flex-direction: column;
+               margin-left: 0;
+               margin-right: 0;
+               padding: 25px 10px;
+              }
               .table-wrap {
                 width: 66px;
                 height: 66px;
@@ -468,8 +589,12 @@
                 padding-right: 10px;
                 padding-left: 10px;
                 display: flex;
-
+                
                 flex-direction: column;
+                @include mobile {
+                  width: 100%;
+                  margin-bottom: 20px;
+                }
                 &__title {
                   font-size: 14px;
                   line-height: 14px;
@@ -480,6 +605,10 @@
                   img {
                     max-width: 226px;
                     max-height: 128px;
+                    @include mobile {
+                      max-width: 100%;
+                      width: 100%;
+                    }
                     @include tablet {
                       max-width: 100%;
                     }
@@ -505,6 +634,10 @@
                 @include firasans-bold;
                 margin-bottom: 40px;
                 text-align: center;
+                @include mobile {
+                  font-size: 28px;
+                  line-height: 39px;
+                }
               }
               &__table {
                 width: 100%;
